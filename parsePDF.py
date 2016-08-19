@@ -15,6 +15,16 @@ import os, glob, re, sys
 
 from collections import Counter
 
+from nltk.util import ngrams
+
+
+# N-Gram the string
+def ngram_String(sentence, n):
+    #return object type is a generator, but each item of this return object is tuple.  
+    return ngrams(sentence.split(), n)
+	    
+
+
 # change to assigned folder and list all PDF filenames
 def get_All_TXT_Name(directoryPath):
     os.chdir(directoryPath)
@@ -91,7 +101,7 @@ print(filenameList)
 
 if len(sys.argv) < 2:
     #no argument
-    print('please assign some arguments and try again. ex: python parsePDF.py /working/path/filename.pdf')
+    print('please assign some arguments and try again. ex: python3 parsePDF.py /working/path/filename.txt')
     sys.exit()
 elif len(sys.argv) > 2:
     print('too many argv, please try again')
@@ -113,7 +123,7 @@ f.close
 #count word occurrences
 reResult = count_word_occurrences(split_string_with_re(fullText))
 
-exceptList = ['is','are','the','The','this','This','that','That','V','not','Not','yes','no','Yes','No','v','and','And','to','To','pages','of','before','over','in','In','on','On','then','between','after','pages','with','for','all','by','By','table','Table','Figure','figure','can','from','data','or','if','else','its','than','be','only','out','Out','datasheet']
+exceptList = ['was','Was','Were','were','is','Is','Are','are','the','The','this','This','that','That','not','Not','yes','no','Yes','No','and','And','to','To','Page','page','pages','Pages','of','Of','Before','before','over','Over','in','In','on','On','then','Then','between','Between','after','After','with','With','for','For','all','All','by','By','table','Table','Figure','figure','can','Can','from','From','data','Data','Or','or','if','If','else','Else','its','Its','than','Than','be','Be','only','Only','out','Out','datasheet','Datasheet']
 
 
 for item in exceptList:
