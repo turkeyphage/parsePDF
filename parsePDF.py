@@ -8,7 +8,8 @@
 #from pdfminer.converter import TextConverter
 #from pdfminer.layout import LAParams
 #from pdfminer.pdfpage import PDFPage
-import os, glob, re, sys
+
+import os, glob, re, sys, operator
 from english_Ngram import ngram_process
 
 
@@ -126,7 +127,11 @@ print('n_gram = ' , ngram_number)
 print('n_gram result:\n')
 filteredwords2String = ' '.join(filtered_words)
 n_gram_result = ngram_process(filteredwords2String, ngram_number)
-print(n_gram_result)
+#print(n_gram_result)
+
+sorted_ngram = sorted(n_gram_result.items(), key=operator.itemgetter(1))
+print(sorted_ngram)
+
 
 
 print('==================================================')
@@ -150,6 +155,8 @@ for item in exceptList:
 print('Parse result with regular expression:\n')
 
 print(reResult)
+
+#print(reResult['High'])
 
 '''
 
