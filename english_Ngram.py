@@ -1,36 +1,51 @@
+'''
+--- english_Ngram.py ---
+
+function:
+1. n-gram the string
+2. count occurrence
+3. return a dictionary for counting result
+
+'''
+
 from nltk.util import ngrams
+import operator
 
-def ngram_String(sentence, n):
-    return ngrams(sentence.split(), n)
+#txt = 'roger is the man and hello world roger is the first sentence'
+#n = 3
+
+def ngram_process(sentence, n):
+    after_ngram = ngrams(sentence.split(), n)
+
+    all_list = []
+    for item in after_ngram:
+      #print(len(item)
+      s =''
+      for index in range(len(item)):
+        #print(item[index])
+        if index == (len(item)-1):
+           s += item[index] 
+        else:
+           s += item[index]+' '
+      #print(s)
+      all_list.append(s)
+
+    
+    #remove the duplicated one
+    seen = set()
+    seen_add = seen.add
+    filtered = [x for x in all_list if not (x in seen or seen_add(x))]
+
+    #set a dictionary with keys from n-gram_noDuplicated result
+    dic ={ el:0 for el in filtered}
+
+    #count the occurance
+    for s in all_list:
+        if s in dic:
+            dic[s] = dic[s]+1
+    
+    return dic
 
 
+#print(ngram_process(txt, n))
 
-txt = 'this is roger, I am going to tell you a story'
-n = 3
-
-after_ngram = ngram_String(txt, n)
-
-
-print(type(after_ngram))
-
-
-all_list = []
-for item in after_ngram:
-  #print(len(item)
-  s =''
-  for index in range(len(item)):
-    #print(item[index])
-    if index == (len(item)-1):
-       s += item[index] 
-    else:
-       s += item[index]+' '
-  #print(s)
-  all_list.append(s)
-print(all_list)
-'''
-for grams in after_ngram:
-    #print(grams)
-    #combine the words
-    s = grams[0]+' '+grams[1]+' '+grams[2]
-    print(s)
-'''

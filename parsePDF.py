@@ -9,21 +9,16 @@
 #from pdfminer.layout import LAParams
 #from pdfminer.pdfpage import PDFPage
 import os, glob, re, sys
+from english_Ngram import ngram_process
+
 
 #from pdfminer.pdfparser import PDFParser
 #from pdfminer.pdfdocument import PDFDocument
 
 from collections import Counter
 
-from nltk.util import ngrams
 
-
-# N-Gram the string
-def ngram_String(sentence, n):
-    #return object type is a generator, but each item of this return object is tuple.  
-    return ngrams(sentence.split(), n)
-	    
-
+ngram_number = 2
 
 # change to assigned folder and list all PDF filenames
 def get_All_TXT_Name(directoryPath):
@@ -120,8 +115,29 @@ f = open(tail, 'rt')
 fullText = f.read()
 f.close
 
+
+#filted_words is a list
+filtered_words = split_string_with_re(fullText)
+
+
+#test n-gram
+
+print('n_gram = ' , ngram_number)
+print('n_gram result:\n')
+filteredwords2String = ' '.join(filtered_words)
+n_gram_result = ngram_process(filteredwords2String, ngram_number)
+print(n_gram_result)
+
+
+print('==================================================')
+
+
+
+#print(type(filtered_words))
+#print(filtered_words)
+
 #count word occurrences
-reResult = count_word_occurrences(split_string_with_re(fullText))
+reResult = count_word_occurrences(filtered_words)
 
 exceptList = ['was','Was','Were','were','is','Is','Are','are','the','The','this','This','that','That','not','Not','yes','no','Yes','No','and','And','to','To','Page','page','pages','Pages','of','Of','Before','before','over','Over','in','In','on','On','then','Then','between','Between','after','After','with','With','for','For','all','All','by','By','table','Table','Figure','figure','can','Can','from','From','data','Data','Or','or','if','If','else','Else','its','Its','than','Than','be','Be','only','Only','out','Out','datasheet','Datasheet']
 
@@ -129,6 +145,9 @@ exceptList = ['was','Was','Were','were','is','Is','Are','are','the','The','this'
 for item in exceptList:
     if item in reResult:
        del reResult[item]
+
+
+print('Parse result with regular expression:\n')
 
 print(reResult)
 
