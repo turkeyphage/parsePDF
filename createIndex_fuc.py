@@ -88,5 +88,5 @@ def createIndex_fuc(source_file_name):
 
 
 #test
-createIndex_fuc('index.txt')
+#createIndex_fuc('index.txt')
 
