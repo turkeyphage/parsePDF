@@ -1,0 +1,1034 @@
+ABCD networks in cascade, 601
+ABCD parameters, 600
+for networks, 604
+Absolute permeability, 69, 537
+permittivity, 55
+voltage, 48, 49
+A.c. bridges, 118, 381
+generator, 178, 525
+values, 180
+Acceptor circuit, 205
+Active power, 209, 369, 376, 513
+Admittance, 356
+Air capacitor, 63
+Alkaline cell, 26
+Alternating current, 178
+waveforms, 179
+Alternative energy sources, 34
+Aluminium, 123
+Ammeter, 10, 100
+Ampere, 3
+Amplifier gain, 247, 249
+Amplitude, 106, 180
+Analogue instrument, 98
+Analogue-to-digital conversion, 107,
+255
+Anderson bridge, 474
+Angular velocity, 184
+Anode, 26, 128
+Antimony, 123
+Antinode, 676
+Apparent power, 209, 370, 371
+Applications of resonance, 220
+Argand diagram, 335
+Argument, 339
+Armature, 294
+reaction, 294
+Arsenic, 123
+Asymmetrical π-section, 592
+T-section, 579, 592
+Atom, 9, 538
+Attenuation, 579, 582
+bands, 612
+coefficient, 629, 671
+constant, 629, 665
+Attenuators, 579
+asymmetrical π, 592
+asymmetrical T, 579, 582
+cascade, 597
+L-section, 595
+symmetrical π, 584
+symmetrical T, 579, 583
+Attraction type of m.i. instrument, 98
+Audio-frequency transformer, 279
+Auto transformer, 286
+starting, 326
+Auxiliary equations, 687
+Avalanche effect, 126
+breakdown, 126, 129
+Average value, 180
+Avometer, 10
+Back e.m.f., 301
+Band-pass filter, 614, 627
+-stop filter, 614
+Bandwidth, 208, 245, 399
+Barrier potential, 124
+Base, 134
+Batteries, 25, 28
+disposal of, 33
+Bell, electric, 16, 79
+B-H curves, 69, 537
+Bias, 136
+Bipolar junction transistor, 133, 134,
+136
+characteristics, 137
+Boron, 123
+Breakdown voltage, 126
+Bridge, a.c., 118, 381
+Bridge megger, 10, 102
+rectifier, 129, 191
+Brush contact loss, 300
+Brushes, 293
+Buffer amplifier, 250
+Calibration accuracy, 118
+Camera flash, 237
+Candela, 3
+Capacitance, 54, 551, 662
+between concentric cylinders, 561
+of isolated twin line, 566
+Capacitive reactance, 195, 345
+Capacitors, 52, 54
+charging, 229
+discharging, 65, 234
+energy stored in, 62
+in parallel, 58
+in series, 58
+parallel plate, 56
+practical types, 63, 553
+reservoir, 191
+Car ignition, 16
+Carbon resistors, 17
+Cartesian complex numbers, 335
+Cathode, 26, 128
+ray oscilloscope, 10, 105
+double beam, 106
+Cell, 26, 30, 33
+capacity, 33
+Ceramic capacitor, 64
+Characteristic impedance, 580, 610
+in terms of ABCD parameters, 610
+in terms of primary line constants,
+666
+of filters, 614
+of transmission lines, 666
+Characteristics, d.c. generator, 296–300
+d.c. machines, 294
+d.c. motor, 304–308
+transistor, 137, 140
+Charge, 3, 54
+density, 55
+Charged particles, 26
+Charging of cell, 28, 31
+capacitor, 229, 680
+Chemical effect of electric current, 16
+electricity, 26
+Choke, 92
+Circuit magnification factor, 395
+theory, 162
+CIVIL, 196
+Class A amplifier, 144
+Closed-loop gain, 247
+Coaxial cable, 561
+Coefficient of coupling, 645
+Coercive force, 75, 539
+Cofactor, 418
+Coils in series, cumulatively coupled,
+646
+differentially coupled, 646
+Collector, 134
+Combination of waveforms, 186
+Commercial bridge, 118
+Common-mode rejection ratio, 246
+Commutation, 293
+Commutator, 294
+Complex conjugate, 336
+equations, 338
+Complex numbers, 335
+applications to parallel networks, 356
+applications to series circuits, 344
+Cartesian form, 335
+De Moivres theorem, 342
+determination of power, 370
+equations, 338
+operations involving, 336
+polar form, 339
+Complex wave, 113, 491
+form factor, 511
+frequency, 700
+general equation, 492
+harmonics in single-phase circuits,
+515
+mean value, 511
+power associated with, 513
+resonance due to harmonics, 523
+r.m.s. value, 509
+sources of harmonics, 525
+waveform considerations, 532
+Composite filters, 639
+series magnetic circuits, 71
+Compound motor, 307
+winding, 294
+wound generator, 299
+Concentric cable, 561, 571
+field plotting, 564
+Conductance, 6, 356, 662
+Conductor, 9, 13, 121
+Constant-current source, 168
+Constant-k high-pass filter, 621
+low-pass filter, 620
+Contact potential, 124, 125
+Continuity tester, 10, 102
+Continuous function, 501
+loading, 671
+Cooker, 16
+Copper loss, 281, 300
+Core loss, 300
+component, 274
+Core type transformer construction, 278
+Corrosion, 27
+Coulomb, 3, 9, 54
+Coulomb’s law, 53
+Coupled circuits, 649
+dot rule, 654
+Coupling coefficient, 645
+Covalent bonds, 123
+Critically damped circuit, 687, 711
+Cumulative compoundmotor, 307
+Curie temperature, 539
+Current, 4
+decay in L–R circuit, 239, 685
+division, 41, 360
+gain, 140
+growth in L–R circuit, 237, 683
+magnification, 407
+main effects of, 16
+transformer, 289
+Current gain in transistors, 140
+Curvilinear squares, 557, 558
+Cut-off frequency, 617, 623
+Cycle, 179
+Damping, 84, 98, 710
+device, 98
+D.c. circuit theory, 155, 162
+generators, 296
+machine construction, 293
+machine losses, 300
+machines, 292
+motors, 84, 292, 301
+motor starter, 310
+potentiometer, 117
+transients, 17
+Decibel, 114, 581
+meter, 115
+Delta connection, 262, 469
+Delta-star comparison, 269
+transformation, 469
+De Moivre’s theorem, 342
+Depletion layer, 124, 125
+De Sauty bridge, 118, 385
+Design impedance, 618
+Detector types, a.c. bridges, 382
+Determinants, 417
+Deviation from resonant frequency, 403
+Diamagnetism, 537
+Dielectric, 54, 55, 551
+hysteresis, 554
+liquid, 553
+loss, 554
+strength, 62, 552
+stress, 562
+Differential amplifier, 251, 253
+compoundmotor, 307
+voltage amplifier, 245
+Differential equation solution, 697
+Differentiator circuit, 242
+Diffusion, 124
+Digital multimeter, 102
+oscilloscopes, 98, 105, 107
+voltmeter, 101
+Digital-to-analogue conversion, 254
+Dimensions of most economical cable,
+563
+Diode characteristics, 128
+Dirac function, 691
+Discharging of capacitors, 65, 234, 682
+cells, 28, 31
+Disposal of batteries, 33
+Dissipation factor, 554
+Distortion on transmission line, 670
+Diverter, 311
+Domains, 538
+Doping, 123
+Dot rule for coupled circuits, 654
+Double beam oscilloscope, 106
+cage induction motor, 328
+Drift, 9
+Dust core, 548
+Dynamic current gain, 140, 148
+resistance, 220, 406
+Earth, 49
+Earth potential, 50
+Edison cell, 31
+Eddy current loss, 281, 542
+Effective value, 180
+Efficiency of d.c. generator, 301
+d.c. motor, 308
+induction motor, 321
+transformer, 281
+Electrical energy, 14
+measuring instruments and
+measurements, 10, 97
+power, 6, 13
+quantities and units, 725
+safety, 183
+symbols, 9
+Electric bell, 16, 79
+cell, 26
+field strength, 53, 551
+fire, 16
+flux density, 55, 551
+force, 53
+potential, 5
+Electrochemical series, 26
+Electrodes, 26
+Electrolysis, 26
+Electrolyte, 26, 31
+Electrolytic capacitors, 64
+Electromagnetic induction, 86
+laws of, 87
+Electromagnetic wave, 661
+Electromagnetism, 77
+Electromagnets, 79
+Electromotive force, 5, 27
+Electron, 9, 26, 122
+Electronic instruments, 101
+Electroplating, 16, 26
+Electrostatic field, 52
+E.m.f., 5, 27
+equation of transformer, 275
+in armature winding, 294
+Emitter, 134
+Energy, 4
+associatedwith travelling wave, 673
+electrical, 6, 14
+stored in capacitor, 62
+stored in electric field, 569
+stored in electromagnetic field, 576
+stored in magnetic field of inductor,
+93, 577
+Equipotential lines, 558
+Equivalent circuit, transformer, 279
+Errors, measurement, 118
+Exponential growth and decay curves,
+230
+Even function, 505, 533
+Farad, 54
+Faraday’s laws of electromagnetic
+induction, 87
+Ferrites, 75, 548
+Ferromagnetic-cored coils, 525
+materials, 70, 538
+Field effect transistor, 133, 141
+amplifiers, 144
+characteristics, 142
+Field plotting, 557
+theory, 557
+Filter networks, 192, 612
+band-pass, 614
+band-stop, 614
+composite, 639
+high-pass, 613
+low-pass, 612
+‘m derived’, 635
+time delay, 632
+Final value theorem, 691
+Finite discontinuities, 501
+Fleming’s left-hand rule, 81
+right-hand rule, 87
+Fluke, 10, 102
+Flux density, 67, 536
+electric, 55
+Flux linkage, 571
+Flux, magnetic, 67, 536
+Force, 4
+on a charge, 85
+current-carrying conductor, 80
+Forced magnetization, 527
+resonant frequency, 408
+Form factor, 180, 511
+Formulae, 151, 330, 717
+Forward bias, 125
+characteristics, 126
+transconductance, 143
+Fourier coefficients, 501
+Fourier cosine series, 505
+Fourier series, 493
+for non-periodic functions, 502
+for periodic functions, 500
+over any range, 507
+Fourier sine series, 506
+Free magnetization, 526
+Frequency, 106, 179, 184
+resonant, 205, 220
+Friction and windage losses, 300
+Fuel cell, 33
+Full wave rectification, 129, 190, 191
+Fundamental, 113, 492, 501
+Furnace, 16
+Fuse, 16, 183
+Gallium arsenide, 123
+Galvanometer, 116
+Gas insulation, 553
+Generator, 16, 292, 296
+a.c., 178
+efficiency of, 301
+Geothermal energy, 34
+Germanium, 121, 123
+Gravitational force, 4
+Greek alphabet, 728
+Grip rule, 78
+Half-power points, 208, 399
+-wave rectification, 190
+-wave rectifier, 129, 190
+Harmonic analysis, 493
+numerical method, 493, 529
+Harmonic resonance, 523
+synthesis, 493
+Harmonics, 113, 492, 501
+in single phase circuits, 515
+sources of, 525
+Hay bridge, 118, 383
+Heating effect of electric current, 16
+Heaviside bridge, 118
+Henry, 91, 571
+Hertz, 179
+High-pass filter, 613, 623
+ladder, 616
+‘m derived’, 637
+Hole, 122
+Hydroelectricity, 34
+Hydrogen cell, 33
+Hysteresis, 75, 539
+loop, 75, 539
+loss, 75, 281, 539
+Image impedance, 592
+Imaginary numbers, 335
+Impedance, 197, 200
+matching, 487
+triangle, 197, 200
+Impulse, 691
+Impurity, 122
+Incident wave, 672
+Indium arsenide, 123
+Induced e.m.f., 88, 571
+Inductance, 91, 571, 662
+mutual, 91, 95
+of a coil, 93
+of a concentric cylinder, 571, 572
+of an isolated twin line, 574, 662
+Induction motor, three-phase, 314
+construction, 317
+copper loss, 321
+double cage, 328
+impedance and current, 321
+losses and efficiency, 321
+principle of operation, 318
+production of rotating magnetic field,
+315
+rotor e.m.f. and frequency, 320
+starting, 326
+torque equation, 323
+-speed characteristic, 325
+uses, 328
+Inductive circuit, switching, 242
+reactance, 195, 345
+Inductors, 92
+Initial conditions, 712
+value theorem, 692
+Initial slope and three-point method, 231
+Input bias current, 246
+impedance, 247, 249
+offset current, 246
+voltage, 246
+Insertion loss, 589
+ratio, 589
+Instantaneous values, 180
+Instrument ‘loading’ effect, 102
+Insulated gate field effect transistor
+(IGFET), 142
+Insulation, 183
+Insulation and dangers of high current,
+16
+Insulation resistance tester, 10, 102
+Insulator, 9, 13, 121
+Integrated circuit, 132
+Integrator circuit, 242
+op amp, 252
+Internal resistance of a cell, 28
+Interpoles, 293
+Inverse Laplace transforms, 693
+Inverting op amp, 247
+Ion, 26
+Iron, 16
+Iron loss, 281, 300
+Isolating transformer, 288
+Iterative impedance, 580, 592
+Joule, 4, 6, 14
+Junction gate field effect transistor
+(JFET), 141
+Kelvin, 3
+Kettle, 16
+kilo, 4
+Kilowatt-hour, 6, 14
+Kirchhoff’s laws, a.c., 416
+d.c., 155
+in the s-domain, 701
+network analysis, a.c., 418
+Ladder networks, 616
+Lag, angle of, 184
+Lamps in series and parallel, 50
+Lap winding, 294
+Laplace transforms, 689
+by partial fractions, 695
+capacitor, 700
+definition of, 689
+elementary functions, 689
+final value theorem, 692
+inductor, 699
+initial conditions, 712
+initial value theorem, 692
+inverse, 693
+L–R–C circuit, 709
+of derivatives, 692
+resistor, 699
+to solve differential equations, 696
+Laws of electromagnetic induction, 87
+L–C parallel network, 215
+Lead-acid cell, 31
+Lead, angle of, 184
+Leakage currents, 135, 554
+Leclanché cell, 30
+Lenz’s law, 87
+Level compoundedmachine, 299
+Lifting magnet, 16, 79
+Light emitting diodes, 128, 131
+Linear device, 11
+scale, 98
+Liquid dielectrics, 553
+Lithium-ion battery, 26
+Loading effect, 45, 102
+Load line, 146
+Local action, 26, 27
+Logarithmic ratios, 114, 581
+Long shunt compound generator, 299
+motor, 307
+Loop currents, 425
+inductance, 575
+Loss angle, 554
+Losses in d.c. machines, 300
+induction motor, 321
+transformers, 281
+Loudspeaker, 81
+Low-pass filter, 612, 617
+ladder, 616
+‘m derived’, 636
+LR–C parallel network, 216
+resonance, 406
+LR–CR parallel network resonance,
+407
+L–R–C circuit using Laplace
+transforms, 709
+L–R–C series circuit, 686
+L-section attenuator, 595
+Luminous intensity, 3
+Lumped loading, 671
+Magnetically coupled circuits, 643
+Magnetic effect of electric current, 16
+circuit, 66
+field, 67, 536
+strength, 68, 536
+flux, 67, 536
+density, 67, 536
+force, 67
+magnetic, 536
+moment, 537
+properties of materials, 537
+screens, 70
+space constant, 69
+Magnetic field due to electric current, 77
+Magnetizing component, 274
+force, 68
+Magnetization curves, 69, 537
+Magnetomotive force, 68, 536
+Magnification factor, 395
+Majority carriers, 124
+Manganese battery, 26
+Matched network, 589
+Matching transformer, 284, 487
+Maximum efficiency, transfer, 283
+Maximum power transfer theorems,
+d.c., 175
+a.c., 481
+Maximum repetitive reverse voltage,
+129
+Maximum value, 180
+Maxwell bridge, 118, 383
+Maxwell-Wien bridge, 384
+Maxwell’s theorem, 425
+Mechanical analogy of parallel
+resonance, 220
+Mean value, 180
+of complex wave, 511
+Measurement errors, 118
+of power in three phase systems, 265
+‘m derived’ filter, 634
+Mega, 4
+Megger, 102
+Mercury cell, 30
+Mesh-connection, 262, 469
+-current analysis, 425
+Metal oxide resistors, 17
+Mica capacitor, 63
+Micro, 4
+Microelectronic systems, 528
+Milli, 4
+Minor, 418
+Minority carriers, 124
+Mismatched load, 672
+Modulus, 339
+Mole, 3
+Moore’s circle technique, 558
+Motor, 16
+compound, 307
+cooling, 313
+d.c., principle of operation, 84
+efficiency, 308
+speed control, 310
+starter, 310
+Moving coil instrument, principle of, 84
+rectifier instrument, 99
+Moving iron instrument, 98
+Multimeter, 102
+Multiples, 11
+Multiplier, 100
+Mutual inductance, 91, 95, 643
+Nano, 4
+National grid, 178
+Natural frequency, 408
+Negative feedback, 245
+Nepers, 581
+Network analysis, 416
+Neutral point, 259
+Neutron, 9
+Newton, 4, 80
+Nickel cadmium cells, 31
+Nickel-iron alloys, 548
+Nickel metal cells, 31
+Nife cell, 31
+Nodal analysis, 429
+Node, 429, 676
+No load phasor diagram, transformer,
+274
+Nominal impedance, 618, 624
+Non inverting amplifier, 249
+Non-linear device, 11
+scale, 98
+Nonpermanentmagnetic materials, 547
+Norton and Thevenin equivalent
+networks, a.c., 462
+d.c. 171
+Norton’s theorem, a.c., 456
+d.c., 169
+n-p-n transistor, 134
+n-type material, 123
+Nucleus, 9
+Null method of measurement, 116
+Numerical methods, 493
+of harmonic analysis, 529
+Odd functions, 506, 533
+Ohm, 6, 10
+Ohmic values, 22, 23, 730
+Ohmmeter, 10, 101
+Ohm’s law, 11
+On load phasor diagram, transformer,
+277
+Operating point, 147
+Operational amplifiers, 244
+Dual operational amplifiers, 244
+differential, 253
+integrator, 252
+inverting amplifier, 247
+non-inverting amplifier, 249
+parameters, 246
+summing amplifier, 250
+transfer characteristics, 251
+voltage comparator, 251, 255
+voltage follower, 250
+Oscilloscope, analogue, 10, 105
+digital, 105
+Over-damped circuit, 711
+Over-compoundedmachine, 299
+Owen bridge, 118, 384
+Paper capacitor, 63
+Parallel networks, 39, 212, 356, 360
+plate capacitor, 56
+resonance, 219, 405
+Paramagnetism, 538
+Partial fractions, 695
+Passbands, 612
+Peak factor, 180
+Peak-to-peak value, 180
+Peak inverse voltage, 129
+value, 106, 180
+Pentavalent impurity, 123
+Period, 179, 491
+Periodic function, 491
+time, 179, 184
+Permanent magnet, 549
+magnetic materials, 549
+Permeability, absolute, 69, 537
+of free space, 69, 537
+relative, 69, 537
+Permeance, 537
+Permittivity, absolute, 55
+Permittivity of free space, 55
+relative, 55
+Phase delay, 663
+shift coefficient, 664, 671
+Phasor, 184
+Phosphorus, 123
+Photovoltaic cells, 34
+Pico, 4
+π-attenuator, 584, 592
+π-connection, 469
+π-section filter, 635
+Plastic capacitors, 64
+p-n junction, 123
+p-n-p transistor, 135
+Polar form of complex number, 339
+Polarization, 26, 27, 551
+Poles, 293
+Potential difference, 5, 10
+divider, 37, 38
+gradient, 53
+Potentiometer, 38, 46, 117
+Power, 4, 13
+associated with complex waves, 513
+factor, 210, 370, 513, 554
+improvement, 223, 375
+gain, 148
+in a.c. circuits, 208, 212, 367
+in three phase systems, 263
+loss, 555
+transformer, 279
+triangle, 209, 369
+Practical types of capacitor, 63
+Prefixes, 12, 729
+Primary cell, 16, 25, 30
+constants, 661
+Principal node, 429
+Principle of operation, d.c. motor, 84
+m.c. instrument, 84
+Product-arm bridge, 383
+Propagation coefficient, 628, 667
+constant, 629, 664
+Protons, 9, 122
+Prototype filter, 620
+p-type material, 123
+Q-factor, 206, 221, 394, 407
+in series, 398
+Quantity of electric charge, 9
+Quiescent point, 146
+Radio frequency transformer, 279
+Rating of a machine, 370
+transformer, 272
+Ratio-arm bridge, 383
+R–C parallel network, 213
+series circuit, 200, 346, 680
+Reactive power, 209, 370
+Real number, 335
+Reciprocity theorem, 602
+Rectangular complex number, 335
+Rectification, 129, 190
+Rectifier, 129, 525
+Rectifier diode, 128
+Reference level, 114
+Reflected impedance, 650
+wave, 672
+Reflection coefficient, 673
+Regulation of a transformer, 281
+Rejector circuit, 220
+Relative permeability, 69, 537
+permittivity, 55, 551
+voltage, 48
+Relay, 16, 79
+Reluctance, 70, 537
+Remanence, 75, 539
+Renewable energy sources, 34
+Repulsion type of m.i. instrument, 98
+Reservoir capacitor, 191
+Residual flux density, 75, 539
+Resistance, 6, 10, 662
+internal, 28
+matching, 284
+variation, 17
+Resistivity, 17
+Resistor colour coding, 22, 730
+construction, 17
+Resonance, applications of, 220
+Resonance, by tuning capacitors, 652
+due to harmonics, 523
+parallel, 219, 405
+series, 205, 391
+Reverse bias, 125
+characteristics, 126
+Rheostat, 46, 47
+Ripple, 191
+R–L–C circuit using Laplace
+transforms, 709
+R–L–C series circuit, 202, 347
+R–L parallel network, 212
+series circuit, 197, 345
+R.m.s. value, 106, 180
+complex wave, 509
+Roots of auxiliary equation, 687
+Rotation of loop in magnetic field, 90
+Rotor copper loss, 321
+s-domains, 699
+Kirchhoff’s laws, 701
+Saturation flux density, 75, 539
+Schering bridge, 118, 385, 388
+Schottky diodes, 131
+Screw rule, 78
+Secondary cell, 16, 26, 31
+line constants, 665
+Selective resonance, 523
+Selectivity, 208, 401
+Self-excited generator, 296
+Self inductance, 91, 642
+Semiconductor diodes, 121, 128
+materials, 122, 123
+Semiconductors, 123
+Separately-excited generator, 296
+Separation of hysteresis and eddy
+current losses, 545
+Series circuit, 36
+a.c., 344
+Series magnetic circuit, 71
+resonance, 205, 391
+winding, 294
+wound motor, 306, 311
+generator, 298
+Shells, 9, 122
+Shell type transformer construction, 278
+Short circuits, 50
+Short-shunt compoundmotor, 299
+Shunt, 100
+field regulator, 310
+winding, 294
+wound generator, 297
+motor, 304, 310
+Siemens, 6, 356
+Silicon, 121, 123
+Silicon controlled rectifiers, 130
+Silicon-iron alloys, 547
+Silver oxide batteries, 26
+Simple cell, 26
+Simultaneous equations using
+determinants, 417
+Single-phase parallel a.c. network, 212
+series a.c. circuit, 194
+supply, 258
+Sine wave, 179
+general equation, 184
+S.I. units, 3
+Skin effect, 571
+Slew rate, 247
+Slip, 318
+Smoothing of rectified output, 191
+Solar energy, 34
+Soldering iron, 16
+Solenoid, 78
+Sources of harmonics, 525
+Spectrum analysis, 112
+Speed control of d.c. motors, 310
+Squirrel-cage rotor, 317, 326
+Standing wave, 675, 676
+ratio, 677
+Star connection, 259, 469
+Star-delta comparison, 269
+starting, 326
+transformation, 478
+Star point, 259
+Stator, 293
+Steady state, 230, 680
+Steinmetz index, 540
+Step input, L–R–C circuit, 709
+R–C circuit, 608
+R–L circuit, 683
+Stopbands, 612
+Streamline, 558
+Stroboscope, 11
+Sub-multiples, 11
+Summing amplifier, 250, 255
+point, 251
+Superposition theorem, a.c., 436
+d.c., 159
+Susceptance, 356
+Switched-mode power
+supplies, 132
+Switching inductive circuits, 242
+Symmetrical π-attenuator, 584
+T-attenuator, 579, 583
+Symmetrical lattice, 607
+Synchronous speed, 315, 316
+Tachometer, 10
+Tangent method, 231
+T-attenuator, 583
+T-connection, 469
+T-section filter, 634
+Telephone receiver, 80
+Temperature coefficient of
+resistance, 20
+Tesla, 68, 536
+Thermal effects of dielectrics, 553
+Thermodynamic temperature, 3
+Thévenin’s theorem, a.c., 445
+d.c., 165
+Thévinin and Norton equivalent
+networks, 171
+Three-phase induction motors, 314
+construction, 317
+copper loss, 321
+double cage, 328
+impedance and current, 321
+losses and efficiency, 321
+principle of operation, 318
+production of rotating magnetic field,
+315
+rotor e.m.f. and frequency, 320
+starting, 326
+torque equation, 323
+-speed characteristics, 325
+uses, 328
+Three-phase systems, 258
+advantages of, 270
+power, 263
+transformers, 288
+Thyristor, 130, 528
+Tidal power, 34
+Time constant, C–R circuit, 230
+L–R circuit, 237
+Time delay, 632
+Titanium oxide capacitor, 64
+Torque of a d.c. machine, 302
+Torque-speed characteristic of induction
+motor, 325
+Transfer characteristics, 138, 245
+Transformation ratio, 272
+Transformer, 16, 271
+a.f., 279
+auto, 286
+cooling, 279
+construction, 278
+current, 289
+e.m.f. equation, 275
+equivalent circuit, 279
+isolating, 288
+losses and efficiency, 281
+maximum efficiency, 283
+no-load phasor diagram, 274
+on-load phasor diagram, 277
+power, 279
+principle of operation, 272
+regulation, 281
+r.f., 279
+three-phase, 288
+voltage, 290
+windings, 279
+Transient curves, C–R, 231, 680
+L–R, 238, 683
+Transients, 239, 680
+Transistor, 133, 525
+action, 134
+amplifier, 136
+characteristics, 137, 140
+connections, 137
+maximum ratings, 144
+symbols, 134
+Transistor classification, 133
+operating configurations, 137
+parameters, 138
+Transit time, 632
+Transmission lines, 661
+current and voltage relationships,
+664
+distortion, 670
+primary constants, 662
+secondary constants, 665
+standing waves, 675
+wave reflection, 672
+Transmissionmatrix, 601
+parameters, 600
+Trapezoidal rule, 529
+Travelling wave, 661
+Trivalent impurity, 123
+True power, 209
+Two port networks, 579
+in cascade, 597
+Types of capacitor, 63
+UK supply voltage, 260
+Under compoundedmachine,
+299
+Underdamped circuit, 687, 710
+Unit of electricity, 14
+Units, 3, 7
+S.I., 3
+Universal bridge, 118
+instrument, 102
+Vacuum, 55
+Valence electrons, 123
+shell, 122
+Valves, 525
+Varactor diodes, 128, 131
+Variable air capacitor, 63
+Velocity of propagation, 663, 671
+Virtual digital storage oscilloscope,
+110
+Virtual test and measuring instruments,
+109
+Virtual earth, 247
+Volt, 5, 10
+Voltage, 10
+comparator, 251, 255
+follower op amp, 250
+gain, 148
+magnification at resonance, 206,
+395
+regulator, 130
+relative, 48
+transformer, 290
+triangle, 197, 200
+Voltmeter, 10, 27, 100
+Water heater, 16
+Watt, 4, 13
+Wattmeter, 10, 102
+Waveform analyser, 493
+considerations, 532
+harmonics, 113
+Waveforms, 179
+combination of, 186
+Wavelength, 663
+Wave reflection, 672
+winding, 294
+Weber, 67, 536
+Weight, 4
+Wheatstone bridge, 116, 167
+Wien bridge, 118, 386, 388
+Wind power, 34
+Wire wound resistors, 17
+Work, 4
+Wound rotor, 318, 326, 327
+Yoke, 293
+Zener diode, 128, 129
+effect, 126
