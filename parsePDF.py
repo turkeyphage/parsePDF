@@ -51,7 +51,7 @@ f = open(tail, 'rt')
 fullText = f.read()
 f.close
 
-
+print(fullText)
 #type(filted_words) = List
 filtered_words = split_string_with_re(fullText.lower())
 
@@ -60,16 +60,18 @@ filteredwords2String = ' '.join(filtered_words)
 
 
 #process n-gram testing:
-print('n_gram = ', ngram_number)
-print('n_gram result:\n')
+
+#print('n_gram = ', ngram_number)
+#print('n_gram result:\n')
+
 n_gram_result = ngram_process(filteredwords2String, ngram_number)
 #type(n_gram_result) = Dictionary
 #print(n_gram_result)
 
 sorted_ngram = sorted(n_gram_result.items(), key=operator.itemgetter(1))
-print(sorted_ngram)
+#print(sorted_ngram)
 
-print('==================================================')
+#print('==================================================')
 
 
 #print(type(filtered_words))
@@ -86,9 +88,9 @@ for item in exceptList:
        del reResult[item]
 
 
-print('Parse result with regular expression:\n')
+#print('Parse result with regular expression:\n')
 
-print(reResult)
+#print(reResult)
 
 #print(reResult['High'])
 
