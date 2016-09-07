@@ -33,32 +33,35 @@ def split_string_with_re(txt):
 
 if len(sys.argv) < 2:
     #no argument
-    print('please assign some arguments and try again. ex: python3 parsePDF.py /working/path/filename.txt')
-    sys.exit()
-elif len(sys.argv) > 2:
-    print('too many argv, please try again')
-    sys.exit()
+    print('please assign some arguments and try again. ex: python3 parsePDF.py filename.txt')
+    exit(1)
 
 
-head, tail = os.path.split(sys.argv[1])
 
-print('folder: '+ head)
-print('filename: '+ tail)
-os.chdir(head)
+print('filename: ' + sys.argv[1])
 
 #read file
-f = open(tail, 'rt')
-fullText = f.read()
-f.close
 
-print(fullText)
+with open(sys.argv[1]) as f:
+     original_texts = f.read()
+
+
+fullText = re.sub("[(),=\"”“/]", "", original_texts)
+fullText = re.sub("[-―･\n–&:]"," ", fullText)
+
+#print(fullText)
+    
+
+
+
+
 #type(filted_words) = List
 filtered_words = split_string_with_re(fullText.lower())
 
 #type(filteredwords2String) = String
 filteredwords2String = ' '.join(filtered_words)
 
-
+print(filteredwords2String)
 #process n-gram testing:
 
 #print('n_gram = ', ngram_number)
@@ -71,7 +74,7 @@ n_gram_result = ngram_process(filteredwords2String, ngram_number)
 sorted_ngram = sorted(n_gram_result.items(), key=operator.itemgetter(1))
 #print(sorted_ngram)
 
-#print('==================================================')
+print('==================================================')
 
 
 #print(type(filtered_words))
