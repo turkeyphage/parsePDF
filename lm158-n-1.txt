@@ -1,0 +1,125 @@
+LM158-N LM258-N LM2904-N LM358-N
+
+SNOSBT3I – JANUARY 2000 – REVISED DECEMBER 2014
+
+3 Description
+
+The LM158 series consists of two independent, high
+gain,
+internally frequency compensated operational
+amplifiers which were designed specifically to operate
+from a single power supply over a wide range of
+voltages. Operation from split power supplies is also
+possible and the low power supply current drain is
+independent of the magnitude of the power supply
+voltage.
+Application areas include transducer amplifiers, dc
+gain blocks and all the conventional op-amp circuits
+which now can be more easily implemented in single
+power supply systems. For example,
+the LM158
+series can be directly operated off of the standard
+3.3-V power supply voltage which is used in digital
+systems and will easily provide the required interface
+electronics without
+requiring the additional ±15V
+power supplies.
+The LM358 and LM2904 are available in a chip sized
+package (8-Bump DSBGA) using TI's DSBGA
+package technology.
+
+Device Information(1)
+
+LM158-N
+
+LM258-N
+
+LM358-N
+
+LM2904-N
+
+PART NUMBER
+
+PACKAGE
+BODY SIZE (NOM)
+TO-CAN (8)
+9.08 mm x 9.09 mm
+CDIP (8)
+10.16 mm x 6.502 mm
+TO-CAN (8)
+9.08 mm x 9.09 mm
+DSBGA (8)
+1.31 mm x 1.31 mm
+SOIC (8)
+4.90 mm x 3.91 mm
+PDIP (8)
+9.81 mm x 6.35 mm
+TO-CAN (8)
+9.08 mm x 9.09 mm
+DSBGA (8)
+1.31 mm x 1.31 mm
+SOIC (8)
+4.90 mm x 3.91 mm
+PDIP (8)
+9.81 mm x 6.35 mm
+(1) For all available packages, see the orderable addendum at
+the end of the datasheet.
+
+Voltage Controlled Oscillator (VCO)
+
+1 Features
+
+•
+•
+
+1• Available in 8-Bump DSBGA Chip-Sized Package,
+(See AN-1112, SNVA009)
+•
+Internally Frequency Compensated for Unity Gain
+•
+Large DC Voltage Gain: 100 dB
+• Wide Bandwidth (Unity Gain): 1 MHz
+(Temperature Compensated)
+• Wide Power Supply Range:
+– Single Supply: 3V to 32V
+– Or Dual Supplies: ±1.5V to ±16V
+• Very Low Supply Current Drain (500
+A)—Essentially Independent of Supply Voltage
+Low Input Offset Voltage: 2 mV
+Input Common-Mode Voltage Range Includes
+Ground
+• Differential Input Voltage Range Equal to the
+Power Supply Voltage
+•
+Large Output Voltage Swing
+• Unique Characteristics:
+– In the Linear Mode the Input Common-Mode
+Voltage Range Includes Ground and the
+Output Voltage Can Also Swing to Ground,
+even though Operated from Only a Single
+Power Supply Voltage.
+– The Unity Gain Cross Frequency is
+Temperature Compensated.
+– The Input Bias Current is also Temperature
+Compensated.
+• Advantages:
+– Two Internally Compensated Op Amps
+– Eliminates Need for Dual Supplies
+– Allows Direct Sensing Near GND and VOUT
+Also Goes to GND
+– Compatible with All Forms of Logic
+– Power Drain Suitable for Battery Operation
+
+2 Applications
+
+• Active Filters
+• General Signal Conditioning and Amplification
+•
+4- to 20-mA Current Loop Transmitters
+
+1
+
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+

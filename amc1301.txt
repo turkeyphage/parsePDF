@@ -1,0 +1,2342 @@
+AMC1301 Precision, ±250-mV Input, 3-µs Delay, Reinforced Isolated Amplifier
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+1 Features
+
+•
+
+1• ±250-mV Input Voltage Range Optimized for
+Current Measurement Using Shunt Resistors
+Low Offset Error and Drift:
+±200 µV at 25°C, ± 3 µV/°C
+• Fixed Gain: 8.2
+• Very Low Gain Error and Drift:
+±0.3% at 25°C, ± 50 ppm/°C
+• Very Low Nonlinearity and Drift:
+0.03%, 1 ppm/°C
+•
+3.3-V Operation on High-Side and Low-Side
+• System-Level Diagnostic Features
+• Safety-Related Certifications:
+– 7000-VPK Reinforced Isolation per
+DIN V VDE V 0884-10 (VDE V 0884-10):
+2006-12
+– 5000-VRMS Isolation for 1 Minute per UL1577
+– CAN/CSA No. 5A-Component Acceptance
+Service Notice,
+IEC 60950-1, and IEC 60065 End Equipment
+Standards
+• Fully Specified Over the Extended Industrial
+Temperature Range
+
+2 Applications
+
+• Shunt-Resistor-Based Current Sensing In:
+– Motor Drives
+– Frequency Inverters
+– Uninterruptible Power Supplies
+Isolated Voltage Sensing
+
+•
+
+3 Description
+
+The AMC1301 device is a precision, isolated amplifier
+with an output separated from the input circuitry by an
+isolation barrier that is highly resistant to magnetic
+interference. This barrier
+is certified to provide
+reinforced galvanic isolation of up to 7 kVPEAK
+according to VDE V 0884-10 and UL1577. Used in
+conjunction with isolated power supplies, this device
+prevents noise currents on a high common-mode
+voltage line from entering the local ground and
+interfering with or damaging sensitive circuitry.
+The input of the AMC1301 device is optimized for
+direct connection to shunt
+resistors or other
+low
+voltage-level
+signal
+sources.
+The
+excellent
+performance of the device supports accurate current
+control resulting in system-level power savings and,
+especially in motor control applications, lower torque
+ripple. The integrated common-mode overvoltage and
+missing high-side supply voltage detection features of
+the AMC1301 device simplify system-level design
+and diagnostics.
+The AMC1301 device is fully specified over
+the
+extended industrial
+temperature range of –40°C to
++125°C and is available in a wide-body 8-pin SOIC
+(DWV) package.
+
+Device Information (1)
+
+PART NUMBER
+
+PACKAGE
+
+BODY SIZE (NOM)
+
+AMC1301
+SOIC (8)
+5.85 mm × 7.50 mm
+(1) For all available packages, see the orderable addendum at
+the end of the data sheet.
+
+Simplified Schematic
+
+1
+
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+VOUTPVOUTNVDD2GND2GND1VINPVINNVDD1AMC1301HV+HV-To LoadFloatingPower Supply3.3 V or 5.0 VRSHUNTGate DriverGate DriverADS7263 12-Bit ADC3.3 V or 5.0 VReinforced IsolationCopyright © 2016, Texas Instruments IncorporatedProductFolderSample &BuyTechnicalDocumentsTools &SoftwareSupport &CommunityReferenceDesignAMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+Table of Contents
+
+www.ti.com
+
+1
+
+Features .................................................................. 1
+2 Applications ........................................................... 1
+3 Description ............................................................. 1
+4 Revision History..................................................... 2
+
+5 Pin Configuration and Functions ......................... 3
+
+6 Specifications......................................................... 4
+
+6.1 Absolute Maximum Ratings ...................................... 4
+6.2 ESD Ratings.............................................................. 4
+6.3 Recommended Operating Conditions ....................... 4
+6.4 Thermal Information .................................................. 4
+6.5 Power Ratings ........................................................... 4
+6.6 Insulation Specifications............................................ 5
+6.7 Safety-Related Certifications..................................... 6
+6.8 Safety Limiting Values .............................................. 6
+6.9 Electrical Characteristics ........................................... 6
+6.10
+Insulation Characteristics Curves .......................... 8
+6.11 Typical Characteristics ............................................ 9
+
+7 Parameter Measurement Information ................ 16
+
+7.1 Timing Diagrams ..................................................... 16
+
+8 Detailed Description ............................................ 17
+
+8.1 Overview ................................................................. 17
+8.2 Functional Block Diagram ....................................... 17
+8.3 Feature Description ................................................. 17
+8.4 Device Functional Modes ........................................ 18
+
+9 Application and Implementation ........................ 19
+
+9.1 Application Information............................................ 19
+9.2 Typical Applications ................................................ 19
+9.3 Do's and Don'ts ...................................................... 23
+
+10 Power Supply Recommendations ..................... 24
+
+11 Layout................................................................... 25
+
+11.1 Layout Guidelines ................................................. 25
+11.2 Layout Example .................................................... 25
+
+12 Device and Documentation Support ................. 26
+
+12.1 Documentation Support ....................................... 26
+12.2 Community Resources .......................................... 26
+12.3 Trademarks ........................................................... 26
+12.4 Electrostatic Discharge Caution ............................ 26
+12.5 Glossary ................................................................ 26
+
+13 Mechanical, Packaging, And Orderable
+
+Information ........................................................... 26
+
+4 Revision History
+
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+
+Changes from Revision A (April 2016) to Revision B
+
+Page
+
+• Changed Features bullet from "Safety and Regulatory Approvals" to "Safety-Related Certifications" .................................. 1
+• Changed Simplified Schematic figure in Device Information table. ........................................................................................ 1
+• Changed section title from "Regulatory Information" to "Safety-Related Certifications" ....................................................... 6
+• Changed VCM test conditions in Electrical Characteristics table............................................................................................. 6
+• Added VIN footnote to Electrical Characteristics table ........................................................................................................... 6
+• Changed VIN test conditions in Electrical Characteristics table .............................................................................................. 6
+• Changed VIN units in Electrical Characteristics table ............................................................................................................. 6
+• Changed common-mode rejection ratio test condition in Electrical Characteristics table ...................................................... 6
+• Changed RIN parameter information in Electrical Characteristics table .................................................................................. 6
+• Changed output noise equation in Electrical Characteristics table ........................................................................................ 7
+• Deleted "Safety and" from Insulation Characteristics Curves section title ............................................................................ 8
+• Changed Using the AMC1301 Device for Current Sensing in Frequency Inverters figure in Application Information......... 19
+• Changed Zener-Diode Based, High Side Power Supply figure in Power Supply Recommendations ................................. 24
+• Changed wording in the Receiving Notification of Documentation Updates section .......................................................... 26
+• Added a paragraph and changed the formatting of the Related Documentation section ................................................... 26
+
+2
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+www.ti.com
+
+5 Pin Configuration and Functions
+
+DWV Package
+8-Pin SOIC
+Top View
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+PIN
+
+NAME
+
+NO.
+
+GND1
+GND2
+
+VDD1
+
+VDD2
+
+VINN
+VINP
+VOUTN
+VOUTP
+
+4
+5
+
+1
+
+8
+
+3
+2
+6
+7
+
+I/O
+
+—
+—
+
+—
+
+—
+
+I
+I
+O
+O
+
+Pin Functions
+
+DESCRIPTION
+
+High-side analog ground
+Low-side analog ground
+High-side power supply, 3.0 V to 5.5 V.
+See the Power Supply Recommendations section for decoupling recommendations.
+Low-side power supply, 3.0 V to 5.5 V.
+See the Power Supply Recommendations section for decoupling recommendations.
+Inverting analog input
+Noninverting analog input
+Inverting analog output
+Noninverting analog output
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+3
+
+Product Folder Links: AMC1301
+
+Not to scale1VDD18 VDD22VINP7 VOUTP3VINN6 VOUTN4GND15 GND2AMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+6 Specifications
+
+6.1 Absolute Maximum Ratings (1)
+
+www.ti.com
+
+MIN
+
+MAX
+
+UNIT
+
+Supply voltage, VDD1 to GND1 or VDD2 to GND2
+Analog input voltage at VINP, VINN
+Input current to any pin except supply pins
+Junction temperature, TJ
+Storage temperature, Tstg
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended
+Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+
+6.5
+VDD1 + 0.5
+10
+150
+150
+
+V
+V
+mA
+°C
+°C
+
+–0.3
+GND1 – 6
+–10
+
+–65
+
+6.2 ESD Ratings
+
+V(ESD)
+
+Electrostatic discharge
+
+Human-body model (HBM), per ANSI/ESDA/JEDEC JS-001 (1)
+Charged-device model (CDM), per JEDEC specification JESD22-C101 (2)
+
+(1)
+(2)
+
+JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+
+VALUE
+
+±2000
+±1000
+
+UNIT
+
+V
+
+6.3 Recommended Operating Conditions
+
+over operating ambient temperature range (unless otherwise noted)
+
+VDD1
+VDD2
+TA
+
+High-side supply voltage (VDD1 to GND1)
+Low-side supply voltage (VDD2 to GND2)
+Operating ambient temperature
+
+6.4 Thermal Information
+
+THERMAL METRIC (1)
+
+RθJA
+RθJC(top)
+RθJB
+ψJT
+ψJB
+RθJC(bot)
+
+Junction-to-ambient thermal resistance
+Junction-to-case (top) thermal resistance
+Junction-to-board thermal resistance
+Junction-to-top characterization parameter
+Junction-to-board characterization parameter
+Junction-to-case (bottom) thermal resistance
+
+MIN
+
+3.0
+3.0
+–40
+
+NOM
+
+5.0
+3.3
+
+MAX
+
+5.5
+5.5
+125
+
+UNIT
+
+V
+V
+°C
+
+AMC1301
+DWV (SOIC)
+8 PINS
+
+110.1
+51.7
+66.4
+16.0
+64.5
+N/A
+
+UNIT
+
+°C/W
+°C/W
+°C/W
+°C/W
+°C/W
+°C/W
+
+(1) For more information about traditional and new thermal metrics, see Semiconductor and IC Package Thermal Metrics, SPRA953.
+
+6.5 Power Ratings
+
+PARAMETER
+
+TEST CONDITIONS
+
+PD
+
+PD1
+PD2
+
+Maximum power dissipation (both sides)
+Maximum power dissipation (high-side supply)
+Maximum power dissipation (low-side supply)
+
+VDD1 = VDD2 = 5.5 V
+
+VALUE
+
+81.4
+45.65
+35.75
+
+UNIT
+
+mW
+mW
+mW
+
+4
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+www.ti.com
+
+6.6 Insulation Specifications
+
+over operating ambient temperature range (unless otherwise noted)
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+TEST CONDITIONS
+
+VALUE
+
+UNIT
+
+Shortest pin-to-pin distance through air
+Shortest pin-to-pin distance across the package
+surface
+Minimum internal gap (internal clearance) of the
+double insulation (2 × 0.0135 mm)
+DIN EN 60112 (VDE 0303-11); IEC 60112
+According to IEC 60664-1
+Rated mains voltage ≤ 300 VRMS
+Rated mains voltage ≤ 600 VRMS
+Rated mains voltage ≤ 1000 VRMS
+
+At ac voltage (bipolar)
+
+At ac voltage (sine wave)
+At dc voltage
+VTEST = VIOTM, t = 60 s (qualification test)
+VTEST = 1.2 × VIOTM, t = 1 s (100% production test)
+Test method per IEC 60065, 1.2/50-μs waveform,
+VTEST = 1.6 × VIOSM = 10000 VPK (qualification)
+Method a, after input/output safety test subgroup 2 / 3,
+Vini = VIOTM, tini = 60 s,
+Vpd(m) = 1.2 × VIORM = 1800 VPK, tm = 10 s
+Method a, after environmental tests subgroup 1,
+Vini = VIOTM, tini = 60 s,
+Vpd(m) = 1.6 × VIORM = 2400 VPK, tm = 10 s
+Method b1, at routine test (100% production) and
+preconditioning (type test), Vini = VIOTM, tini = 1 s,
+Vpd(m) = 1.875 × VIORM = 2812.5 VPK, tm = 1 s
+VIO = 0.5 VPP at 1 MHz
+VIO = 500 V at TS = 150°C
+
+mm
+
+mm
+
+mm
+
+V
+
+VPK
+VRMS
+VDC
+
+VPK
+
+VPK
+
+pC
+
+pF
+Ω
+
+≥ 9
+
+≥ 9
+
+≥ 0.027
+
+≥ 600
+I
+I-IV
+I-III
+I-II
+
+1500
+
+1000
+1500
+7000
+8400
+
+6250
+
+≤ 5
+
+≤ 5
+
+≤ 5
+
+1.2
+> 109
+2
+40/125/21
+
+GENERAL
+
+CLR
+
+CPG
+
+DTI
+
+CTI
+
+PARAMETER
+
+External clearance (1)
+
+External creepage (1)
+
+Distance through insulation
+
+Comparative tracking index
+Material group
+
+Overvoltage category per IEC 60664-1
+
+DIN V VDE V 0884-10 (VDE V 0884-10): 2006-12 (2)
+
+Maximum repetitive peak isolation
+voltage
+Maximum-rated isolation working
+voltage
+
+Maximum transient isolation voltage
+
+Maximum surge isolation voltage (3)
+
+Apparent charge (4)
+
+Barrier capacitance, input to output (5)
+Insulation resistance, input to output (5)
+Pollution degree
+Climatic category
+
+VIORM
+
+VIOWM
+
+VIOTM
+
+VIOSM
+
+qpd
+
+CIO
+RIO
+
+UL1577
+
+VISO
+
+Withstand isolation voltage
+
+VTEST = VISO = 5000 VRMS or 7000 VDC, t = 60 s
+(qualification), VTEST = 1.2 × VISO = 6000 VRMS, t = 1 s
+(100% production test)
+
+5000
+
+VRMS
+
+(1) Apply creepage and clearance requirements according to the specific equipment isolation standards of an application. Care must be
+taken to maintain the creepage and clearance distance of a board design to ensure that the mounting pads of the isolator on the printed
+circuit board (PCB) do not reduce this distance. Creepage and clearance on a PCB become equal in certain cases. Techniques such as
+inserting grooves and ribs on the PCB are used to help increase these specifications.
+(2) This coupler is suitable for safe electrical insulation only within the safety ratings. Compliance with the safety ratings shall be ensured by
+means of suitable protective circuits.
+(3) Testing is carried out in air or oil to determine the intrinsic surge immunity of the isolation barrier.
+(4) Apparent charge is electrical discharge caused by a partial discharge (pd).
+(5) All pins on each side of the barrier are tied together, creating a two-pin device.
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+5
+
+Product Folder Links: AMC1301
+
+AMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+6.7 Safety-Related Certifications
+
+VDE
+
+Certified according to DIN V VDE V 0884-10 (VDE V 0884-10):
+2006-12, DIN EN 60950-1 (VDE 0805 Teil 1): 2014-08, and
+DIN EN 60065 (VDE 0860): 2005-11
+Reinforced insulation
+Certificate number: 40040142
+
+6.8 Safety Limiting Values
+
+www.ti.com
+
+UL
+
+Recognized under 1577 component recognition and
+CSA component acceptance NO 5 programs
+
+Single protection
+File number: E181974
+
+Safety limiting intends to prevent potential damage to the isolation barrier upon failure of input or output (I/O) circuitry.
+A failure of the I/O may allow low resistance to ground or the supply and, without current limiting, dissipate sufficient power to
+overheat the die and damage the isolation barrier, potentially leading to secondary system failures.
+
+PARAMETER
+
+TEST CONDITIONS
+
+MIN
+
+TYP
+
+MAX
+
+UNIT
+
+IS
+
+Safety input, output, or supply
+current
+
+θJA = 110.1°C/W, VI = 5.5 V, TJ = 150°C,
+TA = 25°C
+θJA = 110.1°C/W, VI = 3.6 V, TJ = 150°C,
+TA = 25°C
+PS Safety input, output, or total power θJA = 110.1°C/W, TJ = 150°C, TA = 25°C
+TS Maximum safety temperature
+(1)
+Input, output, or the sum of input and output power must not exceed this value.
+
+206
+
+315
+
+1135 (1)
+150
+
+mA
+
+mW
+°C
+
+The maximum safety temperature is the maximum junction temperature specified for the device. The power
+dissipation and junction-to-air thermal impedance of the device installed in the application hardware determines
+the junction temperature. The assumed junction-to-air thermal resistance in the Thermal Information table is that
+of a device installed on a high-K test board for leaded surface-mount packages. The power is the recommended
+maximum input voltage times the current. The junction temperature is then the ambient temperature plus the
+power times the junction-to-air thermal resistance.
+
+6.9 Electrical Characteristics
+
+Minimum and maximum specifications apply from TA = –40°C to +125°C, VDD1 = 3.0 V to 5.5 V, VDD2 = 3.0 V to 5.5 V,
+VINP = –250 mV to +250 mV, and VINN = 0 V. Typical specifications are at TA = 25°C, VDD1 = 5 V, and VDD2 = 3.3 V
+(unless otherwise noted).
+
+PARAMETER
+
+TEST CONDITIONS
+
+MIN
+
+TYP
+
+MAX UNIT
+
+ANALOG INPUT
+
+VClipping
+VFSR
+VCM
+
+VCMov
+VOS
+
+TCVOS
+
+Differential input voltage before clipping
+output
+Specified linear differential full-scale
+Specified common-mode input voltage
+Absolute common-mode input voltage (1)
+Common-mode overvoltage detection
+level
+Input offset voltage
+Input offset drift
+
+CMRR
+
+Common-mode rejection ratio
+
+CIND
+RIN
+RIND
+IIB
+
+TCIIB
+BWIN
+
+Differential input capacitance
+Single-ended input resistance
+Differential input resistance
+Input bias current
+Input bias current drift
+Input bandwidth
+
+VINP – VINN
+
+VINP – VINN
+(VINP + VINN) / 2 to GND1
+(VINN + VINP) / 2 to GND1
+
+Initial, at TA = 25°C, VINP = VINN = GND1
+
+fIN = 0 Hz, VCM min ≤ VCM ≤ VCM max
+fIN = 10 kHz, VCM min ≤ VCM ≤ VCM max
+
+VINN = GND1
+
+–250
+–0.16
+–2
+
+VDD1 – 2
+
+–200
+–3
+
+VINP = VINN = GND1
+
+–82
+
+±302.7
+
+250
+VDD1 – 2.1
+VDD1
+
+mV
+
+mV
+V
+V
+
+V
+
+±50
+±1
+–93
+–93
+1
+18
+22
+–60
+1
+1000
+
+200
+3
+
+µV
+µV/°C
+
+dB
+
+pF
+kΩ
+kΩ
+µA
+nA/°C
+kHz
+
+–48
+
+(1) Steady-state voltage supported by the device in case of a system failure. See specified common-mode input voltage VCM for normal
+operation. Observe analog input voltage range as specified in Absolute Maximum Ratings.
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+6
+
+Product Folder Links: AMC1301
+
+www.ti.com
+
+Electrical Characteristics (continued)
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+Minimum and maximum specifications apply from TA = –40°C to +125°C, VDD1 = 3.0 V to 5.5 V, VDD2 = 3.0 V to 5.5 V,
+VINP = –250 mV to +250 mV, and VINN = 0 V. Typical specifications are at TA = 25°C, VDD1 = 5 V, and VDD2 = 3.3 V
+(unless otherwise noted).
+
+PARAMETER
+ANALOG OUTPUT
+
+EG
+TCEG
+
+THD
+
+Nominal gain
+Gain error
+Gain error drift
+Nonlinearity
+Nonlinearity drift
+Total harmonic distortion
+
+Output noise
+
+SNR
+
+Signal-to-noise ratio
+
+PSRR
+
+Power-supply rejection ratio
+
+tr
+tf
+
+Rise time
+Fall time
+VIN to VOUT signal delay (50% – 10%)
+VIN to VOUT signal delay (50% – 50%)
+VIN to VOUT signal delay (50% – 90%)
+Common-mode transient immunity
+Common-mode output voltage
+Output short-circuit current
+Output resistance
+BW
+Output bandwidth
+VFAILSAFE Failsafe differential output voltage
+
+VCMout
+
+CMTI
+
+ROUT
+
+POWER SUPPLY
+
+IDD1
+
+IDD2
+
+PDD1
+
+PDD2
+
+High-side supply current
+
+Low-side supply current
+
+High-side power dissipation
+
+Low-side power dissipation
+
+TEST CONDITIONS
+
+MIN
+
+TYP
+
+MAX UNIT
+
+Initial, at TA = 25°C
+
+fIN = 10 kHz
+VINP = VINN = GND1, fIN = 0 Hz,
+BW = 100 kHz
+fIN = 1 kHz, BW = 10 kHz
+fIN = 10 kHz, BW = 100 kHz
+vs VDD1, at dc
+vs VDD1, 100-mV and 10-kHz ripple
+vs VDD2, at dc
+vs VDD2, 100-mV and 10-kHz ripple
+See Figure 45
+See Figure 45
+See Figure 46, unfiltered output
+See Figure 46, unfiltered output
+See Figure 46, unfiltered output
+|GND1 – GND2| = 1 kV
+
+on VOUTP or VOUTN
+
+VCM ≥ VCMov, or VDD1 missing
+
+3.0 V ≤ VDD1 ≤ 3.6 V
+4.5 V ≤ VDD1 ≤ 5.5 V
+3.0 V ≤ VDD1 ≤ 3.6 V
+4.5 V ≤ VDD1 ≤ 5.5 V
+3.0 V ≤ VDD1 ≤ 3.6 V
+4.5 V ≤ VDD1 ≤ 5.5 V
+3.0 V ≤ VDD1 ≤ 3.6 V
+4.5 V ≤ VDD1 ≤ 5.5 V
+
+8.2
+–0.3% ±0.05%
+0.3%
+–50
+±15
+50 ppm/°C
+–0.03% ±0.01% 0.03%
+1
+–87
+
+ppm/°C
+dB
+
+80
+
+15
+1.39
+
+190
+
+220
+
+84
+71
+–94
+–90
+–100
+–94
+2.0
+2.0
+0.7
+1.6
+2.5
+
+1.44
+±13
+< 0.2
+210
+–2.563
+
+5.0
+5.9
+4.4
+4.8
+16.5
+29.5
+14.52
+24
+
+μVRMS
+
+dB
+
+dB
+
+µs
+µs
+µs
+µs
+µs
+kV/µs
+V
+mA
+Ω
+kHz
+V
+
+mA
+
+mA
+
+mW
+
+mW
+
+2.0
+2.6
+3.0
+
+1.49
+
+–2.545
+
+6.9
+8.3
+5.6
+6.5
+24.84
+45.65
+20.16
+35.75
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+7
+
+Product Folder Links: AMC1301
+
+AMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+6.10
+
+Insulation Characteristics Curves
+
+www.ti.com
+
+Figure 1. Thermal Derating Curve for Safety-Limiting
+Current per VDE
+
+Figure 2. Thermal Derating Curve for Safety-Limiting
+Power per VDE
+
+TA up to 150°C, stress voltage frequency = 60 Hz
+
+Figure 3. Reinforced Isolation Capacitor Lifetime Projection
+
+8
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+TA (°C)IS (mA)0501001502000100200300400500D043VDD1 = VDD2 = 3.6 VVDD1 = VDD2 = 5.5 VTA (°C)PS (mW)05010015020001002003004005006007008009001000110012001300D044www.ti.com
+
+6.11 Typical Characteristics
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+at VDD1 = 5 V, VDD2 = 3.3 V, VINP = –250 mV to 250 mV, VINN = 0 V, and fIN = 10 kHz (unless otherwise noted)
+
+Figure 4. Common-Mode Overvoltage Detection Level
+vs High-Side Supply Voltage
+
+Figure 5. Common-Mode Overvoltage Detection Level
+vs Temperature
+
+VDD1 = 3.3 V
+
+VDD1 = 5 V
+
+Figure 6. Input Offset Voltage Histogram
+
+Figure 7. Input Offset Voltage Histogram
+
+Figure 8. Input Offset Voltage vs Supply Voltage
+
+Figure 9. Input Offset Voltage vs Temperature
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+9
+
+Product Folder Links: AMC1301
+
+VDDx (V)VOS (PV)33.253.53.7544.254.54.7555.255.5-200-150-100-50050100150200D005vs VDD1vs VDD2Temperature (°C)VOS (PV)-40-25-105203550658095110125-200-150-100-50050100150200D006Device 1Device 2Device 3VOS (PV)Devices (%)01020304050-200-175-150-125-100-75-50-250255075100125150175200D003VOS (PV)Devices (%)01020304050-200-175-150-125-100-75-50-250255075100125150175200D004VDD1 (V)VCMov (V)33.253.53.7544.254.54.7555.255.511.41.82.22.633.43.8D001Temperature (°C)VCMov (V)-40-25-10520355065809511012511.41.82.22.633.43.8D002AMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+Typical Characteristics (continued)
+
+www.ti.com
+
+at VDD1 = 5 V, VDD2 = 3.3 V, VINP = –250 mV to 250 mV, VINN = 0 V, and fIN = 10 kHz (unless otherwise noted)
+
+VDD1 = 3.3 V
+
+VDD1 = 5 V
+
+Figure 10. Input Offset Drift Histogram
+
+Figure 11. Input Offset Drift Histogram
+
+Figure 12. Common-Mode Rejection Ratio
+vs Input Frequency
+
+Figure 13. Common-Mode Rejection Ratio
+vs Temperature
+
+Figure 14. Input Bias Current
+vs Common-Mode Input Voltage
+
+Figure 15. Input Bias Current
+vs High-Side Supply Voltage
+
+10
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+VCM (V)IIB (PA)-0.500.511.522.53-80-60-40-200204060D012VDD1 (V)IIB (PA)33.253.53.7544.254.54.7555.255.5-82-78-74-70-66-62-58-54-50-46D013fIN (kHz)CMRR (dB)0.0010.010.10.523510201001000-120-100-80-60-40-200D009Temperature (°C)CMRR (dB)-40-25-105203550658095110125-110-105-100-95-90-85-80-75-70-65-60D011TCVOS (PV/qC)Devices (%)010203040506070-3-2.5-2-1.5-1-0.500.511.522.53D007TCVOS (PV/qC)Devices (%)010203040506070-3-2.5-2-1.5-1-0.500.511.522.53D008www.ti.com
+
+Typical Characteristics (continued)
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+at VDD1 = 5 V, VDD2 = 3.3 V, VINP = –250 mV to 250 mV, VINN = 0 V, and fIN = 10 kHz (unless otherwise noted)
+
+Figure 16. Input Bias Current vs Temperature
+
+Figure 17. Normalized Gain vs Input Frequency
+
+VDD2 = 3.3 V
+
+VDD2 = 5 V
+
+Figure 18. Gain Error Histogram
+
+Figure 19. Gain Error Histogram
+
+Figure 20. Gain Error vs Supply Voltage
+
+Figure 21. Gain Error vs Temperature
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+11
+
+Product Folder Links: AMC1301
+
+VDDx (V)EG (%)33.253.53.7544.254.54.7555.255.5-0.3-0.25-0.2-0.15-0.1-0.0500.050.10.150.20.250.3D018vs VDD1vs VDD2Temperature (°C)EG (%)-40-25-105203550658095110125-0.3-0.25-0.2-0.15-0.1-0.0500.050.10.150.20.250.3D019Device 1Device 2Device 3EG (%)Devices (%)01020304050-0.3-0.25-0.2-0.15-0.1-0.0500.050.10.150.20.250.3D016EG (%)Devices (%)01020304050-0.3-0.25-0.2-0.15-0.1-0.0500.050.10.150.20.250.3D017Temperature (°C)IIB (PA)-40-25-105203550658095110125-82-78-74-70-66-62-58-54-50-46D014Input Signal Frequency (kHz)Normalized Gain (dB)0.010.11101001000-80-70-60-50-40-30-20-100D015AMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+Typical Characteristics (continued)
+
+www.ti.com
+
+at VDD1 = 5 V, VDD2 = 3.3 V, VINP = –250 mV to 250 mV, VINN = 0 V, and fIN = 10 kHz (unless otherwise noted)
+
+VDD1 = 3.3 V
+
+VDD1 = 5 V
+
+Figure 22. Gain Error Drift Histogram
+
+Figure 23. Gain Error Drift Histogram
+
+Figure 24. Output Voltage vs Input Voltage
+
+Figure 25. Nonlinearity vs Input Voltage
+
+Figure 26. Nonlinearity vs Supply Voltage
+
+Figure 27. Nonlinearity vs Temperature
+
+12
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+VDDx (V)Nonlinearity (%)33.253.53.7544.254.54.7555.255.5-0.03-0.025-0.02-0.015-0.01-0.00500.0050.010.0150.020.0250.03D025vs VDD1vs VDD2Temperature (°C)Nonlinearity (%)-40-25-105203550658095110125-0.03-0.025-0.02-0.015-0.01-0.00500.0050.010.0150.020.0250.03D026Device 1Device 2Device 3Differential Input Voltage (mV)VOUT (V)-350-250-150-505015025035000.511.522.533.544.55D022VOUTPVOUTNDifferential Input Voltage (mV)Nonlinearity (%)-250-200-150-100-50050100150200250-0.03-0.025-0.02-0.015-0.01-0.00500.0050.010.0150.020.0250.03D024TCEG (ppm/qC)Devices (%)0102030405060708090-50-45-40-35-30-25-20-15-10-505101520253035404550D020TCEG (ppm/qC)Devices (%)0102030405060708090-50-45-40-35-30-25-20-15-10-505101520253035404550D021www.ti.com
+
+Typical Characteristics (continued)
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+at VDD1 = 5 V, VDD2 = 3.3 V, VINP = –250 mV to 250 mV, VINN = 0 V, and fIN = 10 kHz (unless otherwise noted)
+
+Figure 28. Total Harmonic Distortion vs Supply Voltage
+
+Figure 29. Total Harmonic Distortion vs Temperature
+
+Figure 30. Signal-to-Noise Ratio vs Input Voltage
+
+Figure 31. Signal-to-Noise Ratio vs Supply Voltage
+
+Figure 32. Signal-to-Noise Ratio vs Temperature
+
+Figure 33. Input-Referred Noise Density vs Frequency
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+13
+
+Product Folder Links: AMC1301
+
+Temperature (°C)SNR (dB)-40-25-1052035506580951101256062.56567.57072.57577.580D031Device 1Device 2Device 3Frequency (kHz)Input Referred Noise Density (nV/(cid:151)Hz)0.010.1110100100010100100010000D032|VINP - VINN| (mV)SNR (dB)050100150200250300404550556065707580D029VDDx (V)SNR (dB)33.253.53.7544.254.54.7555.255.56062.56567.57072.57577.580D030vs VDD1vs VDD2VDDx (V)THD (dB)33.253.53.7544.254.54.7555.255.5-110-105-100-95-90-85-80-75-70-65-60D027vs VDD1vs VDD2Temperature (°C)THD (dB)-40-25-105203550658095110125-110-105-100-95-90-85-80-75-70-65-60D028Device 1Device 2Device 3AMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+Typical Characteristics (continued)
+
+www.ti.com
+
+at VDD1 = 5 V, VDD2 = 3.3 V, VINP = –250 mV to 250 mV, VINN = 0 V, and fIN = 10 kHz (unless otherwise noted)
+
+vs VDD1
+
+vs VDD2
+
+Figure 34. Power-Supply Rejection Ratio
+vs Ripple Frequency
+
+Figure 35. Power-Supply Rejection Ratio
+vs Ripple Frequency
+
+Figure 36. Output Rise and Fall Time vs Temperature
+
+Figure 37. VIN to VOUT Signal Delay
+vs Low-Side Supply Voltage
+
+Figure 38. VIN to VOUT Signal Delay vs Temperature
+
+Figure 39. Output Common-Mode Voltage
+vs Low-Side Supply Voltage
+
+14
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+Temperature (°C)Signal Delay (Ps)-40-25-1052035506580951101250.20.611.41.82.22.633.43.8D03650% - 10%50% - 50%50% - 90%VDD2 (V)Output Common-Mode Voltage (V)33.253.53.7544.254.54.7555.255.51.391.41.411.421.431.441.451.461.471.481.49D010Temperature (°C)Rise/Fall Time (Ps)-40-25-10520355065809511012500.511.522.533.54D034VDD2 (V)Signal Delay (Ps)33.253.53.7544.254.54.7555.255.50.20.611.41.82.22.633.43.8D03550% - 10%50% - 50%50% - 90%Ripple Frequency (kHz)PSRR (dB)0.0010.010.11101001000-120-100-80-60-40-200D033Ripple Frequency (kHz)PSRR (dB)0.0010.010.11101001000-120-100-80-60-40-200D042www.ti.com
+
+Typical Characteristics (continued)
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+at VDD1 = 5 V, VDD2 = 3.3 V, VINP = –250 mV to 250 mV, VINN = 0 V, and fIN = 10 kHz (unless otherwise noted)
+
+Figure 40. Output Common-Mode Voltage vs Temperature
+
+Figure 41. Output Bandwidth vs Low-Side Supply Voltage
+
+Figure 42. Output Bandwidth vs Temperature
+
+Figure 43. Supply Current vs Supply Voltage
+
+Figure 44. Supply Current vs Temperature
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+15
+
+Product Folder Links: AMC1301
+
+Temperature (°C)IDDx (mA)-40-25-1052035506580951101253.544.555.566.577.588.5D041IDD1IDD2Temperature (°C)BW (kHz)-40-25-105203550658095110125250240230220210200190D039VDDx (V)IDDx (mA)33.253.53.7544.254.54.7555.255.53.544.555.566.577.588.5D040IDD1 vs VDD1IDD2 vs VDD2Temperature (°C)VCMout (V)-40-25-1052035506580951101251.391.41.411.421.431.441.451.461.471.481.49D037VDD2 (V)BW (kHz)33.253.53.7544.254.54.7555.255.5160180200220240D038AMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+7 Parameter Measurement Information
+
+7.1 Timing Diagrams
+
+www.ti.com
+
+Figure 45. Rise and Fall Time Test Waveforms
+
+Figure 46. Delay Time Test Waveforms
+
+16
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+VINP - VINNVOUTNVOUTP50% - 10% 0.5 V0 V90%10%50%50%50% - 50% 50% - 90%    VINP - VINNVOUTNVOUTP 0.5 V0 V90%  10%trtfwww.ti.com
+
+8 Detailed Description
+
+8.1 Overview
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+The AMC1301 device is a fully-differential, precision, isolated amplifier. The input stage of the device consists of
+a fully-differential amplifier that drives a second-order, delta-sigma (ΔΣ) modulator. The modulator uses the
+internal voltage reference and clock generator to convert the analog input signal to a digital bitstream. The
+drivers (called TX in the Functional Block Diagram) transfer the output of the modulator across the isolation
+barrier that separates the high-side and low-side voltage domains. The received bitstream and clock are
+synchronized and processed by a fourth-order analog filter on the low-side and presented as a differential output
+of the device, as shown in the Functional Block Diagram.
+The SiO2-based, double-capacitive isolation barrier supports a high level of magnetic field immunity, as described
+in ISO72x Digital Isolator Magnetic-Field Immunity. The digital modulation used in the AMC1301 device and the
+isolation barrier characteristics result in high reliability and common-mode transient immunity.
+
+8.2 Functional Block Diagram
+
+8.3 Feature Description
+
+8.3.1 Analog Input
+
+The AMC1301 device incorporates front-end circuitry that contains a fully-differential amplifier followed by a ΔΣ
+modulator sampling stage. The gain of the differential amplifier is set by internal precision resistors to a factor of
+4 with a differential input impedance of 22 kΩ. Consider the input impedance of the AMC1301 device in designs
+with high-impedance signal sources that may cause degradation of gain and offset specifications. The
+importance of this effect, however, depends on the desired system performance.
+Additionally, the input bias current caused by the internal common-mode voltage at the output of the differential
+amplifier causes an offset that is dependent on the actual amplitude of the input signal. See the Isolated Voltage
+Sensing section for more details on reducing this effect.
+There are two restrictions on the analog input signals (VINP and VINN). First, if the input voltage exceeds the
+range GND1 – 6 V to VDD1 + 0.5 V, then the input current must be limited to 10 mA because the device input
+electrostatic discharge (ESD) protection turns on. In addition, the linearity and noise performance of the device
+are ensured only when the analog input voltage remains within the specified linear full-scale range (FSR) and
+within the specified common-mode input voltage range.
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+17
+
+Product Folder Links: AMC1301
+
+TXRetiming and 4th-Order Active Low-Pass FilterIsolation Barrier         ß(cid:8)-ModulatorBand-GapReferenceVOUTPVOUTNGND1VINPVINNVDD1AMC1301+–RXRXTXDataCLKVDD2GND2Band-GapReferenceOscillatorCopyright © 2016, Texas Instruments IncorporatedAMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+Feature Description (continued)
+
+8.3.2 Fail-Safe Output
+
+www.ti.com
+
+The AMC1301 device offers a fail-safe output that simplifies diagnostics on system level. The fail-safe output is
+active in two cases:
+• When the high-side supply VDD1 of the AMC1301 device is missing, or
+• When the common-mode input voltage, that is VCM = (VINP + VINN) / 2, exceeds the minimum common-
+mode over-voltage detection level VCMov of VDD1 – 2 V.
+The fail-safe output of the AMC1301 device is a negative differential output voltage value that differs from the
+negative clipping output voltage, as shown in Figure 47 and Figure 48. As a reference value for the fail-safe
+detection on a system level, use the VFAILSAFE maximum value of –2.545 V.
+
+Figure 47. Typical Negative Clipping Output of the
+AMC1301 Device
+
+Figure 48. Typical Failsafe Output of the AMC1301 Device
+
+8.4 Device Functional Modes
+
+The AMC1301 device is operational when the power supplies VDD1 and VDD2 are applied, as specified in
+Recommended Operating Conditions.
+
+18
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+www.ti.com
+
+9 Application and Implementation
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+Information in the following applications sections is not part of
+the TI component
+specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+responsible for determining suitability of components for their purposes. Customers should
+validate and test their design implementation to confirm system functionality.
+
+NOTE
+
+9.1 Application Information
+
+The AMC1301 device offers unique linearity, high input common-mode and power-supply rejection, low ac and
+dc errors, and low temperature drift. These features make the AMC1301 device a robust, high-performance,
+isolated amplifier for industrial applications where high voltage isolation is required.
+
+9.2 Typical Applications
+
+9.2.1 Frequency Inverter Application
+
+Isolated amplifiers are widely used in frequency inverters that are critical parts of
+industrial motor drives,
+photovoltaic inverters, uninterruptible power supplies, electrical and hybrid electrical vehicles, and other industrial
+applications. The input structure of the AMC1301 device is optimized for use with low-value shunt resistors and is
+therefore tailored for isolated current sensing using shunts.
+Figure 49 shows a typical operation of
+the AMC1301 device for current sensing in a frequency inverter
+application. Phase current measurement is done through the shunt resistor, RSHUNT (in this case, a two-pin
+shunt). The differential
+input and the high common-mode transient immunity of the AMC1301 device ensure
+reliable and accurate operation even in high-noise environments (such as the power stage of the motor drive).
+Additionally,
+the AMC1301 device may also be used for isolated voltage measurement of
+the dc-link, as
+described in Isolated Voltage Sensing.
+
+Figure 49. Using the AMC1301 Device for Current Sensing in Frequency Inverters
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+19
+
+Product Folder Links: AMC1301
+
+VOUTPVOUTNVDD2GND2GND1VINPVINNVDD1AMC1301HV+HV-To LoadFloatingPower Supply15 V3.3 VRSHUNT5.1 VR1 D1C110 (cid:29)F C20.1 (cid:29)F C40.1 (cid:29)F C52.2 (cid:29)F ADCGate DriverGate DriverTMS320C/F28xReinforced IsolationR2 R3 C3 Copyright © 2016, Texas Instruments IncorporatedAMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+Typical Applications (continued)
+
+9.2.1.1 Design Requirements
+
+www.ti.com
+
+Table 1 lists the parameters for the typical application in Figure 49.
+
+Table 1. Design Requirements
+
+PARAMETER
+
+High-side supply voltage
+Low-side supply voltage
+Voltage drop across the shunt for a linear response
+
+9.2.1.2 Detailed Design Procedure
+
+VALUE
+
+3.3 V or 5 V
+3.3 V or 5 V
+± 250 mV (maximum)
+
+The high-side power supply (VDD1) for the AMC1301 device is derived from the power supply of the upper gate
+driver. Further details are provided in the Power Supply Recommendations section.
+The floating ground reference (GND1) is derived from one of the ends of the shunt resistor that is connected to
+the negative input of the AMC1301 device (VINN). If a four-pin shunt is used, the inputs of the AMC1301 device
+are connected to the inner leads and GND1 is connected to one of the outer shunt leads.
+Use Ohm's Law to calculate the voltage drop across the shunt resistor (VSHUNT) for the desired measured
+current: VSHUNT = I × RSHUNT.
+Consider the following two restrictions to choose the proper value of the shunt resistor RSHUNT:
+• The voltage drop caused by the nominal current range must not exceed the recommended differential input
+voltage range: VSHUNT ≤ ± 250 mV
+• The voltage drop caused by the maximum allowed overcurrent must not exceed the input voltage that causes
+a clipping output: VSHUNT ≤ VClipping
+For best performance, use an RC filter (components R2, R3, and C3 in Figure 49) to minimize the noise of the
+differential output signal. Tailor the bandwidth of this RC filter to the bandwidth requirement of the system. TI
+recommends an NP0-type capacitor to be used for C3.
+For more information on the general procedure to design the filtering and driving stages of SAR ADCs, consult
+the TI Precision Designs 18-Bit, 1MSPS Data Acquisition Block (DAQ) Optimized for Lowest Distortion and Noise
+(SLAU515), and 18-Bit Data Acquisition Block (DAQ) Optimized for Lowest Power (SLAU513), available for
+download at www.ti.com.
+
+20
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+www.ti.com
+
+9.2.1.3 Application Curves
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+In frequency inverter applications, the power switches must be protected in case of an overcurrent condition. To
+allow for fast powering off of the system, a low delay caused by the isolated amplifier is required. Figure 50
+shows the typical full-scale step response of the AMC1301 device. Consider the delay of the required window
+comparator and the MCU to calculate the overall response time of the system.
+
+Figure 50. Step Response of the AMC1301 Device
+
+The high linearity and low temperature drift of offset and gain errors of the AMC1301 device, as shown in
+Figure 51, allows design of motor drives with low torque ripple.
+
+Figure 51. Typical Nonlinearity of the AMC1301 Device
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+21
+
+Product Folder Links: AMC1301
+
+Differential Input Voltage (mV)Nonlinearity (%)-250-200-150-100-50050100150200250-0.03-0.025-0.02-0.015-0.01-0.00500.0050.010.0150.020.0250.03D024VINVOUTPVOUTNAMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+9.2.2 Isolated Voltage Sensing
+
+www.ti.com
+
+The AMC1301 device is optimized for usage in current-sensing applications using low-impedance shunts.
+However, the device may also be used in isolated voltage-sensing applications if the effect of the (usually higher)
+impedance of the resistor divider used in this case is considered.
+
+Figure 52. Using the AMC1301 Device for Isolated Voltage Sensing
+
+9.2.2.1 Design Requirements
+
+Figure 52 shows a simplified circuit typically used in high-voltage sensing applications. The high-impedance
+resistors (R1 and R2) dominate the current value that flows through the resistive divider. The resistance of the
+sensing resistor R3 is chosen to meet the input voltage range of the AMC1301 device. This resistor and the input
+impedance of the device (RIN = 18 kΩ) also create a voltage divider that results in an additional gain error. With
+the assumption of R1 and R2 having a considerably higher value than R3 and omitting R3' for the moment, the
+resulting total gain error is estimated using Equation 1, with EG being the initial gain error of the AMC1301
+device.
+
+(1)
+
+This gain error may be easily minimized during the initial system-level gain calibration procedure.
+
+9.2.2.2 Detailed Design Procedure
+
+As indicated in Figure 52, the output of the integrated differential amplifier is internally biased to a common-mode
+voltage of 2 V. This voltage results in a bias current IIB through the resistive network R4 and R5 (or R4' and R5')
+used for setting the gain of the amplifier. The value of this current is specified in the Pin Configuration and
+Functions section. This bias current generates additional offset and gain errors that depend on the value of the
+resistor R3. Because the value of this bias current depends on the actual common-mode amplitude of the input
+signal (as shown in Figure 53), the initial system offset calibration eliminates the offset but not the gain error
+component. Therefore, in systems with high accuracy requirements, a series resistor is recommended to be used
+at the negative input (VINN) of the AMC1301 device with a value equal to the shunt resistor R3 (that is, R3' = R3
+in Figure 52) to eliminate the effect of the bias current.
+This additional series resistor (R3') influences the gain error of
+the circuit. The effect
+is calculated using
+Equation 2 with R4 = R4' = 12.5 kΩ. The effect of the internal resistors R5 = R5' cancels in this calculation.
+
+22
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+(2)
+
+%100*'3'441(%)‚„•¤'§(cid:14)(cid:16) RRREG3GtotGINREER (cid:14)        ß(cid:8)-ModulatorAMC1301 Front-EndVCM = 2 V3.3 V or 5 VHigh Voltage PotentialR1R2R3R4R5R4'R5'IIBRINVDD1VINPVINNGND1R3'+–Copyright © 2016, Texas Instruments Incorporatedwww.ti.com
+
+9.2.2.3 Application Curve
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+Figure 53 shows the dependency of the input bias current on the common-mode voltage at the input of the
+AMC1301 device.
+
+Figure 53. Input Current vs Input Common-Mode Voltage
+
+9.3 Do's and Don'ts
+
+Do not leave the inputs of the AMC1301 device unconnected (floating) when the device is powered up. If both
+device inputs are left floating, the input bias current drives them to the output common-mode of the analog front-
+end of approximately 2 V. If the high-side supply voltage VDD1 is below 4 V, the internal common-mode
+overvoltage detector turns on and the output functions as described in the Fail-Safe Output section, which may
+lead to an undesired reaction on the system level.
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+23
+
+Product Folder Links: AMC1301
+
+VCM (V)IIB (PA)-0.500.511.522.53-80-60-40-200204060D012AMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+10 Power Supply Recommendations
+
+www.ti.com
+
+In a typical frequency inverter application, the high-side power supply (VDD1) for the device is derived from the
+floating power supply of the upper gate driver. For lowest cost, a Zener diode may be used to limit the voltage to
+5 V (or 3.3 V, depending on the design) ± 10%. Alternatively a low-cost, low-dropout (LDO) regulator (for
+example, the LM317-N) may be used to minimize noise on the power supply. TI recommends a low-ESR
+decoupling capacitor of 0.1 µF to filter this power-supply path. Place this capacitor (C2 in Figure 54) as close as
+possible to the VDD1 pin of the AMC1301 device for best performance. If better filtering is required, an additional
+10-µF capacitor may be used. The floating ground reference (GND1) is derived from the end of the shunt
+resistor, which is connected to the negative input (VINN) of the device. If a four-pin shunt is used, the device
+inputs are connected to the inner leads, and GND1 is connected to one of the outer leads of the shunt.
+To decouple the digital power supply on the controller side, use a 0.1-µF capacitor placed as close to the VDD2
+pin of the AMC1301 device as possible, followed by an additional capacitor from 1 µF to 10 µF.
+
+Figure 54. Zener-Diode-Based, High-Side Power Supply
+
+24
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+VOUTPVOUTNVDD2GND2GND1VINPVINNVDD1AMC1301HV+HV-To LoadFloatingPower Supply20 V3.3 V or 5.0 VRSHUNT5.1 VR1800 (cid:13)(cid:3)Z11N751A C110 (cid:29)F C20.1 (cid:29)F C40.1 (cid:29)F C52.2 (cid:29)F ADS7263 12-Bit ADCGate DriverGate DriverReinforced IsolationCopyright © 2016, Texas Instruments Incorporatedwww.ti.com
+
+11 Layout
+
+11.1 Layout Guidelines
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+AMC1301
+
+A layout recommendation showing the critical placement of the decoupling capacitors (as close as possible to the
+AMC1301 device) and placement of the other components required by the device is shown in Figure 55. For best
+performance, place the shunt resistor close to the VINP and VINN inputs of the AMC1301 device and keep the
+layout of both connections symmetrical.
+
+11.2 Layout Example
+
+Figure 55. Recommended Layout of the AMC1301 Device
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+
+25
+
+Product Folder Links: AMC1301
+
+To Filteror ADCClearance area,to be kept free of any conductive materials.AMC1301VINPVINNVOUTNGND2VOUTPVDD20.1 µFSMD0603GND1LEGENDCopper Pour and Traces High-Side AreaLow-Side AreaVia to Ground PlaneVia to Supply PlaneTo Floating Power Supply2.2 µFSMD0603Shunt ResistorVDD10.1 µFSMD0603Copyright © 2016, Texas Instruments IncorporatedAMC1301
+
+SBAS667B – APRIL 2016 – REVISED JUNE 2016
+
+12 Device and Documentation Support
+
+12.1 Documentation Support
+
+www.ti.com
+
+12.1.1 Receiving Notification of Documentation Updates
+
+To receive notification of documentation updates, navigate to the device product folder on ti.com. In the upper
+right corner, click on Alert me to register and receive a weekly digest of any product information that has
+changed. For change details, review the revision history included in any revised document.
+
+12.1.2 Related Documentation
+
+For related documentation, see the following:
+•
+Isolation Glossary.
+• Dual, 1MSPS, 16-/14-/12-Bit, 4×2 or 2×2 Channel, Simultaneous Sampling Analog-to-Digital Converter.
+•
+LM117, LM317-N Wide Temperature Three-Pin Adjustable Regulator.
+•
+ISO72x Digital Isolator Magnetic-Field Immunity.
+•
+18-Bit, 1-MSPS Data Acquisition Block (DAQ) Optimized for Lowest Distortion and Noise
+•
+18-Bit, 1-MSPS Data Acquisition Block (DAQ) Optimized for Lowest Power
+
+12.2 Community Resources
+
+The following links connect to TI community resources. Linked contents are provided "AS IS" by the respective
+contributors. They do not constitute TI specifications and do not necessarily reflect TI's views; see TI's Terms of
+Use.
+
+TI E2E™ Online Community TI's Engineer-to-Engineer (E2E) Community. Created to foster collaboration
+
+among engineers. At e2e.ti.com, you can ask questions, share knowledge, explore ideas and help
+solve problems with fellow engineers.
+Design Support TI's Design Support Quickly find helpful E2E forums along with design support tools and
+contact information for technical support.
+
+12.3 Trademarks
+
+E2E is a trademark of Texas Instruments.
+All other trademarks are the property of their respective owners.
+
+12.4 Electrostatic Discharge Caution
+
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all
+integrated circuits be handled with
+appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may be more
+susceptible to damage because very small parametric changes could cause the device not to meet its published specifications.
+
+12.5 Glossary
+
+SLYZ022 — TI Glossary.
+This glossary lists and explains terms, acronyms, and definitions.
+
+13 Mechanical, Packaging, And Orderable Information
+
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+26
+
+Submit Documentation Feedback
+
+Copyright © 2016, Texas Instruments Incorporated
+
+Product Folder Links: AMC1301
+
+www.ti.com
+
+PACKAGING INFORMATION
+
+PACKAGE OPTION ADDENDUM
+
+5-Jun-2016
+
+Orderable Device
+
+AMC1301DWV
+
+Status
+
+(1)
+
+ACTIVE
+
+Package Type Package
+Drawing
+DWV
+
+SOIC
+
+Pins Package
+Qty
+64
+
+8
+
+AMC1301DWVR
+
+ACTIVE
+
+SOIC
+
+DWV
+
+8
+
+1000
+
+Eco Plan
+
+Lead/Ball Finish
+
+MSL Peak Temp
+
+Op Temp ( °C)
+
+Device Marking
+
+Samples
+
+(2)
+
+(6)
+
+(3)
+
+(4/5)
+
+Green (RoHS
+& no Sb/Br)
+Green (RoHS
+& no Sb/Br)
+
+CU NIPDAU
+
+Level-3-260C-168 HR
+
+-40 to 125
+
+AMC1301
+
+CU NIPDAU
+
+Level-3-260C-168 HR
+
+-40 to 125
+
+AMC1301
+
+(1) The marketing status values are defined as follows:
+ACTIVE: Product device recommended for new designs.
+LIFEBUY: TI has announced that the device will be discontinued, and a lifetime-buy period is in effect.
+NRND: Not recommended for new designs. Device is in production to support existing customers, but TI does not recommend using this part in a new design.
+PREVIEW: Device has been announced but is not in production. Samples may or may not be available.
+OBSOLETE: TI has discontinued the production of the device.
+
+(2) Eco Plan - The planned eco-friendly classification: Pb-Free (RoHS), Pb-Free (RoHS Exempt), or Green (RoHS & no Sb/Br) - please check http://www.ti.com/productcontent for the latest availability
+information and additional product content details.
+TBD:  The Pb-Free/Green conversion plan has not been defined.
+Pb-Free (RoHS): TI's terms "Lead-Free" or "Pb-Free" mean semiconductor products that are compatible with the current RoHS requirements for all 6 substances, including the requirement that
+lead not exceed 0.1% by weight in homogeneous materials. Where designed to be soldered at high temperatures, TI Pb-Free products are suitable for use in specified lead-free processes.
+Pb-Free (RoHS Exempt): This component has a RoHS exemption for either 1) lead-based flip-chip solder bumps used between the die and package, or 2) lead-based  die adhesive used between
+the die and leadframe. The component is otherwise considered Pb-Free (RoHS compatible) as defined above.
+Green (RoHS & no Sb/Br): TI defines "Green" to mean Pb-Free (RoHS compatible), and free of Bromine (Br)  and Antimony (Sb) based flame retardants (Br or Sb do not exceed 0.1% by weight
+in homogeneous material)
+
+(3) MSL, Peak Temp. - The Moisture Sensitivity Level rating according to the JEDEC industry standard classifications, and peak solder temperature.
+
+(4) There may be additional marking, which relates to the logo, the lot trace code information, or the environmental category on the device.
+
+(5) Multiple Device Markings will be inside parentheses. Only one Device Marking contained in parentheses and separated by a "~" will appear on a device. If a line is indented then it is a continuation
+of the previous line and the two combined represent the entire Device Marking for that device.
+
+(6) Lead/Ball Finish - Orderable Devices may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead/Ball Finish values may wrap to two lines if the finish
+value exceeds the maximum column width.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information
+provided by third parties, and makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and
+continues to take reasonable steps to provide representative and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals.
+TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers and other limited information may not be available for release.
+
+Addendum-Page 1
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+www.ti.com
+
+5-Jun-2016
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+PACKAGE OPTION ADDENDUM
+
+Addendum-Page 2
+
+ 
+ 
+www.ti.com
+
+4-Jun-2016
+
+PACKAGE MATERIALS INFORMATION
+
+TAPE AND REEL INFORMATION
+
+*All dimensions are nominal
+
+Device
+
+Package
+Type
+
+Package
+Drawing
+
+Pins
+
+SPQ
+
+AMC1301DWVR
+
+SOIC
+
+DWV
+
+8
+
+1000
+
+Reel
+Diameter
+(mm)
+330.0
+
+Reel
+Width
+W1 (mm)
+16.4
+
+A0
+(mm)
+
+B0
+(mm)
+
+K0
+(mm)
+
+P1
+(mm)
+
+W
+(mm)
+
+Pin1
+Quadrant
+
+12.05
+
+6.15
+
+3.3
+
+16.0
+
+16.0
+
+Q1
+
+Pack Materials-Page 1
+
+www.ti.com
+
+4-Jun-2016
+
+PACKAGE MATERIALS INFORMATION
+
+*All dimensions are nominal
+
+Device
+
+Package Type
+
+Package Drawing Pins
+
+AMC1301DWVR
+
+SOIC
+
+DWV
+
+8
+
+SPQ
+
+1000
+
+Length (mm) Width (mm) Height (mm)
+
+367.0
+
+367.0
+
+38.0
+
+Pack Materials-Page 2
+
+DWV0008A
+
+PIN 1 ID
+AREA
+
+5.95
+5.75
+NOTE 3
+
+A
+
+1
+
+4
+
+11.5 0.25
+TYP
+
+7.6
+7.4
+NOTE 4
+
+PACKAGE OUTLINE
+
+SOIC - 2.8 mm max height
+
+SOIC
+
+C
+
+SEATING PLANE
+
+0.1 C
+
+6X 1.27
+
+2X
+3.81
+
+8X 0.51
+0.31
+0.25
+
+C A
+
+B
+
+2.8 MAX
+
+SCALE  2.000
+
+B
+
+8
+
+5
+
+0.33
+0.13
+
+ TYP
+
+ SEE DETAIL A
+
+0.25
+GAGE PLANE
+
+0 -8
+
+1.0
+0.5
+
+(2.286)
+
+0.46
+0.36
+
+(2)
+
+DETAIL A
+
+TYPICAL
+
+4218796/A   09/2013
+
+NOTES: 
+
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm, per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm, per side.
+
+www.ti.com
+
+ 
+ 
+DWV0008A
+
+EXAMPLE BOARD LAYOUT
+
+SOIC - 2.8 mm max height
+
+SOIC
+
+8X (1.8)
+
+SYMM
+
+SEE DETAILS
+
+8X (0.6)
+
+6X (1.27)
+
+SYMM
+
+(10.9)
+
+LAND PATTERN EXAMPLE
+
+9.1 mm NOMINAL CLEARANCE/CREEPAGE
+SCALE:6X
+
+METAL
+
+SOLDER MASK
+OPENING
+
+SOLDER MASK
+OPENING
+
+METAL
+
+0.07 MAX
+ALL AROUND
+
+NON SOLDER MASK
+DEFINED
+
+0.07 MIN
+ALL AROUND
+
+SOLDER MASK
+DEFINED
+
+SOLDER MASK DETAILS
+
+NOTES: (continued)
+
+5. Publication IPC-7351 may have alternate designs. 
+6. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+
+4218796/A   09/2013
+
+www.ti.com
+
+ 
+ 
+ 
+DWV0008A
+
+EXAMPLE STENCIL DESIGN
+
+SOIC - 2.8 mm max height
+
+SOIC
+
+8X (1.8)
+
+SYMM
+
+8X (0.6)
+
+6X (1.27)
+
+(10.9)
+
+SOLDER PASTE EXAMPLE
+
+BASED ON 0.125 mm THICK STENCIL
+SCALE:6X
+
+SYMM
+
+NOTES: (continued)
+
+7. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+8. Board assembly site may have different recommendations for stencil design.
+
+4218796/A   09/2013
+
+www.ti.com
+
+ 
+ 
+IMPORTANT NOTICE
+
+Texas Instruments Incorporated and its subsidiaries (TI) reserve the right to make corrections, enhancements, improvements and other
+changes to its semiconductor products and services per JESD46, latest issue, and to discontinue any product or service per JESD48, latest
+issue. Buyers should obtain the latest relevant information before placing orders and should verify that such information is current and
+complete. All semiconductor products (also referred to herein as “components”) are sold subject to TI’s terms and conditions of sale
+supplied at the time of order acknowledgment.
+TI warrants performance of its components to the specifications applicable at the time of sale, in accordance with the warranty in TI’s terms
+and conditions of sale of semiconductor products. Testing and other quality control techniques are used to the extent TI deems necessary
+to support this warranty. Except where mandated by applicable law, testing of all parameters of each component is not necessarily
+performed.
+TI assumes no liability for applications assistance or the design of Buyers’ products. Buyers are responsible for their products and
+applications using TI components. To minimize the risks associated with Buyers’ products and applications, Buyers should provide
+adequate design and operating safeguards.
+TI does not warrant or represent that any license, either express or implied, is granted under any patent right, copyright, mask work right, or
+other intellectual property right relating to any combination, machine, or process in which TI components or services are used. Information
+published by TI regarding third-party products or services does not constitute a license to use such products or services or a warranty or
+endorsement thereof. Use of such information may require a license from a third party under the patents or other intellectual property of the
+third party, or a license from TI under the patents or other intellectual property of TI.
+Reproduction of significant portions of TI information in TI data books or data sheets is permissible only if reproduction is without alteration
+and is accompanied by all associated warranties, conditions, limitations, and notices. TI is not responsible or liable for such altered
+documentation. Information of third parties may be subject to additional restrictions.
+Resale of TI components or services with statements different from or beyond the parameters stated by TI for that component or service
+voids all express and any implied warranties for the associated TI component or service and is an unfair and deceptive business practice.
+TI is not responsible or liable for any such statements.
+Buyer acknowledges and agrees that it is solely responsible for compliance with all legal, regulatory and safety-related requirements
+concerning its products, and any use of TI components in its applications, notwithstanding any applications-related information or support
+that may be provided by TI. Buyer represents and agrees that it has all the necessary expertise to create and implement safeguards which
+anticipate dangerous consequences of failures, monitor failures and their consequences, lessen the likelihood of failures that might cause
+harm and take appropriate remedial actions. Buyer will fully indemnify TI and its representatives against any damages arising out of the use
+of any TI components in safety-critical applications.
+In some cases, TI components may be promoted specifically to facilitate safety-related applications. With such components, TI’s goal is to
+help enable customers to design and create their own end-product solutions that meet applicable functional safety standards and
+requirements. Nonetheless, such components are subject to these terms.
+No TI components are authorized for use in FDA Class III (or similar life-critical medical equipment) unless authorized officers of the parties
+have executed a special agreement specifically governing such use.
+Only those TI components which TI has specifically designated as military grade or “enhanced plastic” are designed and intended for use in
+military/aerospace applications or environments. Buyer acknowledges and agrees that any military or aerospace use of TI components
+which have not been so designated is solely at the Buyer's risk, and that Buyer is solely responsible for compliance with all legal and
+regulatory requirements in connection with such use.
+TI has specifically designated certain components as meeting ISO/TS16949 requirements, mainly for automotive use. In any case of use of
+non-designated products, TI will not be responsible for any failure to meet ISO/TS16949.
+
+Products
+
+Audio
+Amplifiers
+Data Converters
+DLP® Products
+DSP
+Clocks and Timers
+Interface
+Logic
+Power Mgmt
+Microcontrollers
+RFID
+OMAP Applications Processors
+Wireless Connectivity
+
+www.ti.com/audio
+amplifier.ti.com
+dataconverter.ti.com
+www.dlp.com
+dsp.ti.com
+www.ti.com/clocks
+interface.ti.com
+logic.ti.com
+power.ti.com
+microcontroller.ti.com
+www.ti-rfid.com
+www.ti.com/omap
+www.ti.com/wirelessconnectivity
+
+Applications
+
+Automotive and Transportation www.ti.com/automotive
+Communications and Telecom www.ti.com/communications
+Computers and Peripherals
+www.ti.com/computers
+Consumer Electronics
+www.ti.com/consumer-apps
+Energy and Lighting
+www.ti.com/energy
+Industrial
+www.ti.com/industrial
+Medical
+www.ti.com/medical
+Security
+www.ti.com/security
+Space, Avionics and Defense
+www.ti.com/space-avionics-defense
+Video and Imaging
+www.ti.com/video
+
+TI E2E Community
+
+e2e.ti.com
+
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2016, Texas Instruments Incorporated
+
+

@@ -1,0 +1,94 @@
+5 Pin Configuration and Functions
+
+D, P, and NAB Package
+8-Pin SOIC, PDIP, and CDIP
+Top View
+
+LM158-N LM258-N LM2904-N LM358-N
+
+SNOSBT3I – JANUARY 2000 – REVISED DECEMBER 2014
+
+LMC Package
+8-Pin TO-99
+Top View
+
+YPB Package
+8-Pin DSBGA
+Top View
+
+D/P/LMC
+NO.
+1
+2
+3
+
+4
+
+5
+6
+7
+8
+
+PIN
+
+DSBGA NO.
+
+A1
+B1
+C1
+
+C2
+
+C3
+B3
+A3
+A2
+
+NAME
+
+OUTA
+-INA
++INA
+
+GND / V-
+
++INB
+-INB
+OUTB
+V+
+
+Pin Functions
+
+TYPE
+
+DESCRIPTION
+
+O
+I
+I
+
+P
+
+I
+I
+O
+P
+
+Output , Channel A
+Inverting Input, Channel A
+Non-Inverting Input, Channel A
+Ground for Single supply configurations. negative supply for dual supply
+configurations
+Output, Channel B
+Inverting Input, Channel B
+Non-Inverting Input, Channel B
+Positive Supply
+
+Copyright © 2000–2014, Texas Instruments Incorporated
+
+Submit Documentation Feedback
+Product Folder Links: LM158-N LM258-N LM2904-N LM358-N
+
+3
+
+
