@@ -18,6 +18,9 @@ import codecs
 
 def createIndex_fuc(source_file_name):
 
+
+    max_len=0
+
     #split filname
     sourceName = source_file_name.split('.')[0]
     #print(sourceName)
@@ -50,14 +53,26 @@ def createIndex_fuc(source_file_name):
         t = t.lower()
 
         if t != '':
+          t_in_list = t.split()
+
+          if len(t_in_list) > max_len:
+             max_len = len(t_in_list)
+
           wholeList.append(t)
 
         dic[t] = None
 
-    #print(wholeList)
+    print(wholeList)
+
+    print('max_len = ', max_len)
 
 
+    print('======================')
 
+    print(dic)
+
+
+    '''
     # utf-8
     jsonData = json.dumps(dic, ensure_ascii=False)
 
@@ -69,6 +84,8 @@ def createIndex_fuc(source_file_name):
 
     print('JSON file created. Filename: ', jsonfile_fullname)
 
+
+    '''
 
     # ascii
     #jsonData = json.dumps(dic, ensure_ascii=True)
@@ -88,5 +105,5 @@ def createIndex_fuc(source_file_name):
 
 
 #test
-#createIndex_fuc('index.txt')
+createIndex_fuc('index.txt')
 
