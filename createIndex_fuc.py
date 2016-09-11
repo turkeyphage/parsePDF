@@ -21,12 +21,10 @@ def createIndex_fuc(source_file_name):
 
     max_len=0
 
-    #split filname
+    # output json filname   'sourceTxtName.json'
     sourceName = source_file_name.split('.')[0]
-    #print(sourceName)
-
     jsonfile_fullname = sourceName + '.json' 
-    #print(jsonfile_fullname)
+   
 
     with open(source_file_name, 'r', encoding='utf-8', buffering=1000000) as f:
         lines = f.readlines()
@@ -50,7 +48,8 @@ def createIndex_fuc(source_file_name):
             else:
                 t = t + str(s[i])
         t = t.strip()
-        t = t.lower()
+        #t = t.rstrip()
+        #t = t.lower()
 
         if t != '':
           t_in_list = t.split()
@@ -60,49 +59,42 @@ def createIndex_fuc(source_file_name):
 
           wholeList.append(t)
 
-        dic[t] = None
+        dic[t] = 0
 
-    print(wholeList)
-
-    print('max_len = ', max_len)
-
-
-    print('======================')
-
-    print(dic)
+    #for item in wholeList:
+    #    print(item)
 
 
-    '''
-    # utf-8
+    #print(wholeList)
+
+    #print('max_len = ', max_len)
+
+
+    print('====================================================================')
+    
+    #print(dic)
+
+
+    
+    # write into output JSON file
     jsonData = json.dumps(dic, ensure_ascii=False)
 
     with codecs.open(jsonfile_fullname, 'w', 'utf8') as outfile:
         # json.dump(jsonData, outfile, sort_keys=True, ensure_ascii=False)
         json.dump(dic, outfile, sort_keys=True, ensure_ascii=False)
 
-    outfile.close()
 
     print('JSON file created. Filename: ', jsonfile_fullname)
+    
 
+    # test: read output json 
+    json_file = open(jsonfile_fullname, 'r')
+    index_content = json.load(json_file)
+    #print(index_content)
+    #for item in index_content.keys():
+    #    print(item)
 
-    '''
-
-    # ascii
-    #jsonData = json.dumps(dic, ensure_ascii=True)
-    #with open('dic.json', 'w') as outfile:
-    #    json.dump(jsonData, outfile, sort_keys=True, ensure_ascii=True)
-
-    #with open(jsonfile_fullname, 'r', encoding='utf-8', buffering=1000000) as infile:
-        # data = json.load(infile)
-        # dic2 = json.loads(data)
-        #dic2 = json.loads(infile.read())
-
-    #infile.close()
-
-    #print(dic2)
-    # for e in dic2:
-    #    print(e, ':', dic2[e])
-
+    
 
 #test
 createIndex_fuc('index.txt')
