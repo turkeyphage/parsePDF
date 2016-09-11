@@ -35,8 +35,21 @@ def count_word_occurrences(list_of_words):
 
 def split_string_with_re(txt):
     #pattern1 is select all words except "\n" "\s" "\t" ","
-    pattern1 = re.compile(r'[\w]+[=]?[\w]+[°C]?\.?[\w]+\.?[\w]+')
+    #pattern1 = re.compile(r'[\w]+[=]?[\']?[\w]+[°C]?\.?[\w]+\.?[\w]+')
+    pattern1 = re.compile(r'[\w]*[±]?[-]?[=]?[\']?[\w]*[°C]?\.?[\w]*\.?[\w]*')
     allresult = re.findall(pattern1, txt)
+
+    allresult = list(filter(('').__ne__, allresult))
+
+
+    for n, i in enumerate(allresult):
+        #print(i)
+        if i[-2:] == '\'s':
+            #print(i)
+            allresult[n] = i[:-2]
+        if i[-1] == '.':
+            allresult[n] = i[:-1]
+
     return allresult
 
 
@@ -45,7 +58,8 @@ def compare_with_target_list(Content_list, Reference_List):
     result=[]
  
     for eachItem in Reference_List:
-       if eachItem.lower() in [x.lower() for x in Content_list]:
+        if eachItem.lower() in [x.lower() for x in Content_list]:
+          if eachItem not in result: 
             result.append(eachItem)
 
     return result
@@ -123,8 +137,8 @@ with open(sys.argv[1]) as f:
      original_texts = f.read()
 
 
-fullText = re.sub("[-―･\n–&:(),\"”“/]", " ", original_texts)
-
+#fullText = re.sub("[-―･\n–&:(),\"”“/]", " ", original_texts)
+fullText = re.sub("[･\n&:(),\"”“/]", " ", original_texts)
 #fullText = re.sub("[-―･\n–&:]"," ", fullText)
 
 
