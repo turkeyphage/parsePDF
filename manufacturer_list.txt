@@ -11,12 +11,13 @@ Active-Semi
 Adafruit
 AIE
 Adesto Technologies
-Analog Devices Inc.
+Analog Devices
 ADI Engineering
 ADLINK Technology
 Advanced Analogic Technologies
 Advanced Linear Devices
 Advanced Semiconductor, Inc.
+ASI
 Advanced Sensors
 Amphenol
 Advanced Thermal Solutions
@@ -314,6 +315,7 @@ Amphenol
 Delphi
 FCT Electronics
 Future Designs, Inc
+Future Designs Inc.
 Fenwal
 Honeywell
 FerriShield
@@ -527,7 +529,7 @@ MinnowBoard by CircuitCo
 Mitsubishi Electric
 Molex
 MPS
-MPS - Monolithic Power Systems
+Monolithic Power Systems
 MSI
 Mueller Electric
 Murata
