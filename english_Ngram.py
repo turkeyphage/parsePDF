@@ -10,6 +10,7 @@ function:
 
 from nltk.util import ngrams
 import operator
+from collections import Counter
 
 #txt = 'roger is the man and hello world roger is the first sentence'
 #n = 3
@@ -27,10 +28,11 @@ def ngram_process(sentence, n):
            s += item[index] 
         else:
            s += item[index]+' '
-      #print(s)
+
       all_list.append(s)
 
     
+    '''
     #remove the duplicated one
     seen = set()
     seen_add = seen.add
@@ -43,9 +45,10 @@ def ngram_process(sentence, n):
     for s in all_list:
         if s in dic:
             dic[s] = dic[s]+1
-    
-    return dic
+    '''
 
+    dic = Counter(all_list)
+    return dic
 
 #print(ngram_process(txt, n))
 

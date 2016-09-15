@@ -11,8 +11,11 @@ electronicTerm_reference_data={}
 
 data_after_ngram = {}
 
-manufacturer_search_result=[]
-electronic_term_search_result=[]
+#manufacturer_search_result=[]
+#electronic_term_search_result=[]
+manufacturer_search_result={}
+electronic_term_search_result={}
+
 
 ngram_number = 0
 
@@ -43,9 +46,7 @@ def split_string_with_re(txt):
 
 
     for n, i in enumerate(allresult):
-        #print(i)
         if i[-2:] == '\'s':
-            #print(i)
             allresult[n] = i[:-2]
         if i[-1] == '.':
             allresult[n] = i[:-1]
@@ -53,14 +54,14 @@ def split_string_with_re(txt):
     return allresult
 
 
-def compare_with_target_list(Content_list, Reference_List):
+def compare_with_target_list(Content_list, Reference_list):
 
     result=[]
  
-    for eachItem in Reference_List:
-        if eachItem.lower() in [x.lower() for x in Content_list]:
-          if eachItem not in result: 
-            result.append(eachItem)
+    for eachItem in Content_list:
+        if eachItem.lower() in [x.lower() for x in Reference_list]:
+            if eachItem not in result:
+                result.append(eachItem)
 
     return result
 
@@ -98,6 +99,22 @@ def classifiler_reference(reference_list):
         final_result['result'][str(len(item_in_list))].append(item)
     return final_result
 
+
+def count_occurrence(target_list):
+    #remove the duplicated one
+    seen = set()
+    seen_add = seen.add
+    filtered = [x for x in target_list if not (x in seen or seen_add(x))]
+
+    #set a dictionary with keys from target_list No Duplicated result
+    result_dic ={ el:0 for el in filtered}
+
+    #count the occurance
+    for s in target_list:
+        if s in result_dic:
+            result_dic[s] = result_dic[s]+1
+    
+    return result_dic
 
 
 
@@ -145,37 +162,59 @@ fullText = re.sub("[･\n&:(),\"”“/]", " ", original_texts)
 # -------- One word -------- 
 #type(filted_words) = List
 filtered_words = split_string_with_re(fullText)
+one_word_occurrence = count_word_occurrences(filtered_words)
 
-#print(filtered_words)
 
 #type(filteredwords2String) = String
 filteredwords2String = ' '.join(filtered_words)
 
 
+
+
+
 # gether N-Gram data:
 for i in range(1, ngram_number+1):
     if i == 1:
-        data_after_ngram[str(i)] = filtered_words
+        #data_after_ngram[str(i)] = filtered_words
+        data_after_ngram[str(i)] = one_word_occurrence
     else:
-        data_after_ngram[str(i)] = ngram_process(filteredwords2String, i).keys()
+        #data_after_ngram[str(i)] = ngram_process(filteredwords2String, i).keys()
+        data_after_ngram[str(i)] = ngram_process(filteredwords2String, i)
 
 
 
 
 # get manufacturer index result:
+
+print('--------------------------------------------')
 for i in range(1, manufacturer_reference_data['max_length']+1):
-    compare_result = compare_with_target_list(data_after_ngram[str(i)], manufacturer_reference_data['result'][str(i)])
-    manufacturer_search_result += compare_result
+    compare_result = compare_with_target_list(data_after_ngram[str(i)].keys(), manufacturer_reference_data['result'][str(i)])
+
+    for each in compare_result:
+        manufacturer_search_result[each] = data_after_ngram[str(i)][each]
+
 print('Searching Manufacturer List:')
-print(manufacturer_search_result)
 
 
+print(sorted(manufacturer_search_result.items(), key=lambda x: (-x[1], x[0])))
+#for item in manufacturer_search_result.keys():
+#    print(item,':',manufacturer_search_result[item])
+
+
+
+print('--------------------------------------------')
 # get electronic index search result
 for i in range(1, electronicTerm_reference_data['max_length']+1):
-    compare_result = compare_with_target_list(data_after_ngram[str(i)], electronicTerm_reference_data['result'][str(i)])
-    electronic_term_search_result += compare_result
+    compare_result = compare_with_target_list(data_after_ngram[str(i)].keys(), electronicTerm_reference_data['result'][str(i)])
+
+    for each in compare_result:
+        electronic_term_search_result[each] = data_after_ngram[str(i)][each]
+
 print('Searching Electronic Index List:')
-print(electronic_term_search_result)
+print(sorted(electronic_term_search_result.items(), key=lambda x: (-x[1], x[0])))
+#for item in electronic_term_search_result.keys():
+#    print(item,':',electronic_term_search_result[item])
+
 
 
 
