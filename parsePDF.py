@@ -117,6 +117,20 @@ def count_occurrence(target_list):
     return result_dic
 
 
+#remove duplicated item
+def remove_duplicated_item(original_dic):
+    noDuplicatedDic = {}
+    for key,value in original_dic.items():
+        if key.lower() not in noDuplicatedDic.keys():
+           noDuplicatedDic[key.lower()]=value
+        elif key.lower() in noDuplicatedDic.keys():
+           newValue = noDuplicatedDic[key.lower()] + value
+           noDuplicatedDic[key.lower()] = newValue
+
+    return noDuplicatedDic
+
+
+
 
 # ---------------- Main Program Start ---------------- #
 
@@ -193,9 +207,9 @@ for i in range(1, manufacturer_reference_data['max_length']+1):
     for each in compare_result:
         manufacturer_search_result[each] = data_after_ngram[str(i)][each]
 
+manufacturer_search_result = remove_duplicated_item(manufacturer_search_result)
+
 print('Searching Manufacturer List:')
-
-
 print(sorted(manufacturer_search_result.items(), key=lambda x: (-x[1], x[0])))
 #for item in manufacturer_search_result.keys():
 #    print(item,':',manufacturer_search_result[item])
@@ -209,6 +223,8 @@ for i in range(1, electronicTerm_reference_data['max_length']+1):
 
     for each in compare_result:
         electronic_term_search_result[each] = data_after_ngram[str(i)][each]
+
+electronic_term_search_result = remove_duplicated_item(electronic_term_search_result)
 
 print('Searching Electronic Index List:')
 print(sorted(electronic_term_search_result.items(), key=lambda x: (-x[1], x[0])))
