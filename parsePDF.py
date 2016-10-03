@@ -134,11 +134,13 @@ def remove_duplicated_item(original_dic):
 
 # ---------------- Main Program Start ---------------- #
 
+
+
 ##### 1. read file.txt to string variable
 
 if len(sys.argv) < 2:
     #no argument
-    print('please assign some arguments and try again. ex: python3 parsePDF.py filename.txt')
+    print('please assign some arguments and try again. ex: python3 parsePDF.py original.json')
     exit(1)
 
 
@@ -163,76 +165,142 @@ else:
 #print(ngram_number)
 
 
+
+'''
 #read file
 with open(sys.argv[1]) as f:
      original_texts = f.read()
 
-
-#fullText = re.sub("[-―･\n–&:(),\"”“/]", " ", original_texts)
-fullText = re.sub("[･\n&:(),\"”“/]", " ", original_texts)
-#fullText = re.sub("[-―･\n–&:]"," ", fullText)
+'''
 
 
-# -------- One word -------- 
-#type(filted_words) = List
-filtered_words = split_string_with_re(fullText)
-one_word_occurrence = count_word_occurrences(filtered_words)
+#read data from json file (corpus_ds150.json)
+with open(sys.argv[1]) as ds150_json:
+    ds150_data = json.load(ds150_json)
 
 
-#type(filteredwords2String) = String
-filteredwords2String = ' '.join(filtered_words)
+#print(ds150_data)
+
+#for key in ds150_data.keys():
+#    if ds150_data[key] == '':
+#        print(key)
+
+
+new_json_data = {}
+
+
+for keyitem in ds150_data.keys():
+
+    original_texts = ds150_data[keyitem]
+    #print(key)
+
+    #fullText = re.sub("[-―･\n–&:(),\"”“/]", " ", original_texts)
+    fullText = re.sub("[･\n&:(),\"”“/]", " ", original_texts)
+    #fullText = re.sub("[-―･\n–&:]"," ", fullText)
+
+    #print(fullText)
+
+    # -------- One word -------- 
+    #type(filted_words) = List
+    filtered_words = split_string_with_re(fullText)
+    one_word_occurrence = count_word_occurrences(filtered_words)
+    #print(filtered_words)
+
+    #type(filteredwords2String) = String
+    filteredwords2String = ' '.join(filtered_words)
+    
+
+    #print(filteredwords2String)
 
 
 
 
-
-# gether N-Gram data:
-for i in range(1, ngram_number+1):
-    if i == 1:
-        #data_after_ngram[str(i)] = filtered_words
-        data_after_ngram[str(i)] = one_word_occurrence
-    else:
+    # gether N-Gram data:
+    for i in range(1, ngram_number+1):
+        if i == 1:
+            #data_after_ngram[str(i)] = filtered_words
+            data_after_ngram[str(i)] = one_word_occurrence
+        else:
         #data_after_ngram[str(i)] = ngram_process(filteredwords2String, i).keys()
-        data_after_ngram[str(i)] = ngram_process(filteredwords2String, i)
+            data_after_ngram[str(i)] = ngram_process(filteredwords2String, i)
+
+    #print(data_after_ngram)
+
+
+    # get manufacturer index result:
+
+    #print('--------------------------------------------')
+
+    for i in range(1, manufacturer_reference_data['max_length']+1):
+        compare_result = compare_with_target_list(data_after_ngram[str(i)].keys(), manufacturer_reference_data['result'][str(i)])
+
+        for each in compare_result:
+            manufacturer_search_result[each] = data_after_ngram[str(i)][each]
+
+    manufacturer_search_result = remove_duplicated_item(manufacturer_search_result)
+    #print(manufacturer_search_result)
+    #print('Searching Manufacturer List:')
+    #print(sorted(manufacturer_search_result.items(), key=lambda x: (-x[1], x[0])))
+    #for item in manufacturer_search_result.keys():
+    #    print(item,':',manufacturer_search_result[item])
 
 
 
+    #print('--------------------------------------------')
+    # get electronic index search result
+    for i in range(1, electronicTerm_reference_data['max_length']+1):
+        compare_result = compare_with_target_list(data_after_ngram[str(i)].keys(), electronicTerm_reference_data['result'][str(i)])
 
-# get manufacturer index result:
+        for each in compare_result:
+            electronic_term_search_result[each] = data_after_ngram[str(i)][each]
 
-print('--------------------------------------------')
-for i in range(1, manufacturer_reference_data['max_length']+1):
-    compare_result = compare_with_target_list(data_after_ngram[str(i)].keys(), manufacturer_reference_data['result'][str(i)])
-
-    for each in compare_result:
-        manufacturer_search_result[each] = data_after_ngram[str(i)][each]
-
-manufacturer_search_result = remove_duplicated_item(manufacturer_search_result)
-
-print('Searching Manufacturer List:')
-print(sorted(manufacturer_search_result.items(), key=lambda x: (-x[1], x[0])))
-#for item in manufacturer_search_result.keys():
-#    print(item,':',manufacturer_search_result[item])
+    electronic_term_search_result = remove_duplicated_item(electronic_term_search_result)
+    #print(electronic_term_search_result)
+    #print('Searching Electronic Index List:')
+    #print(sorted(electronic_term_search_result.items(), key=lambda x: (-x[1], x[0])))
+    #for item in electronic_term_search_result.keys():
+    #    print(item,':',electronic_term_search_result[item])
 
 
-
-print('--------------------------------------------')
-# get electronic index search result
-for i in range(1, electronicTerm_reference_data['max_length']+1):
-    compare_result = compare_with_target_list(data_after_ngram[str(i)].keys(), electronicTerm_reference_data['result'][str(i)])
-
-    for each in compare_result:
-        electronic_term_search_result[each] = data_after_ngram[str(i)][each]
-
-electronic_term_search_result = remove_duplicated_item(electronic_term_search_result)
-
-print('Searching Electronic Index List:')
-print(sorted(electronic_term_search_result.items(), key=lambda x: (-x[1], x[0])))
-#for item in electronic_term_search_result.keys():
-#    print(item,':',electronic_term_search_result[item])
+    for m_key in manufacturer_search_result.keys():
+        for i in range(0, manufacturer_search_result[m_key]):    
+            filteredwords2String += ' '
+            filteredwords2String += m_key
 
 
+    for e_key in electronic_term_search_result.keys():
+        for i in range(0, electronic_term_search_result[e_key]):  
+            filteredwords2String += ' '
+            filteredwords2String += e_key
 
+
+    #print(filteredwords2String)
+
+
+    #new_contain_for_json
+
+
+
+    manufacturer_search_result = {}
+    electronic_term_search_result = {}
+
+
+
+    if original_texts != '':
+        new_json_data[keyitem] = filteredwords2String
+    else :
+        print('no string output file: ', keyitem)
+
+
+'''
+
+'''
+#print(new_json_data.keys())
+#print(new_json_data.keys())
+
+
+with open('ds150_new.json', 'w') as fp:
+    json.dump(new_json_data, fp)
 
 
 
